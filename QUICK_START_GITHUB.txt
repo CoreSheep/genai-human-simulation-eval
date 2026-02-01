@@ -1,0 +1,72 @@
+╔════════════════════════════════════════════════════════════════╗
+║         QUICK START: Push to GitHub in 3 Steps                 ║
+╚════════════════════════════════════════════════════════════════╝
+
+STEP 1: Create Repository on GitHub
+────────────────────────────────────────────────────────────────
+→ Go to: https://github.com/new
+→ Repository name: roland-berger-genai-evaluation
+→ Description: Multi-dimensional evaluation framework for AI simulations
+→ Choose Public or Private
+→ DO NOT check any boxes (no README, no .gitignore, no license)
+→ Click "Create repository"
+
+
+STEP 2: Run Setup Script
+────────────────────────────────────────────────────────────────
+Open Terminal and paste:
+
+    cd "/Users/jiufeng/Documents/Documents_iCloud/Interview_prep/Roland Berger/Roland Berger - GenAI Assignment"
+    ./setup_github.sh
+
+→ Enter your GitHub username when prompted
+→ Enter repository name (or press Enter for default)
+→ Type 'y' when ready to push
+
+
+STEP 3: Verify on GitHub
+────────────────────────────────────────────────────────────────
+→ Visit: https://github.com/YOUR_USERNAME/roland-berger-genai-evaluation
+→ You should see all your files!
+→ Add topics/tags for better discoverability
+→ Pin to your profile to showcase it
+
+
+═══════════════════════════════════════════════════════════════
+
+ALTERNATIVE: Manual Commands
+────────────────────────────────────────────────────────────────
+If the script doesn't work, use these commands:
+
+    cd "/Users/jiufeng/Documents/Documents_iCloud/Interview_prep/Roland Berger/Roland Berger - GenAI Assignment"
+    git init
+    git add .
+    git commit -m "Initial commit: GenAI evaluation framework"
+    git remote add origin https://github.com/YOUR_USERNAME/REPO_NAME.git
+    git branch -M main
+    git push -u origin main
+
+(Replace YOUR_USERNAME and REPO_NAME with your actual values)
+
+
+═══════════════════════════════════════════════════════════════
+
+FILES CREATED FOR YOU:
+────────────────────────────────────────────────────────────────
+✅ .gitignore           - Excludes sensitive files
+✅ setup_github.sh      - Automated setup script
+✅ GITHUB_SETUP.md      - Detailed setup guide
+✅ This file            - Quick reference
+
+═══════════════════════════════════════════════════════════════
+
+TROUBLESHOOTING:
+────────────────────────────────────────────────────────────────
+❌ "Permission denied" → Check repository exists on GitHub
+❌ "Authentication failed" → Use personal access token, not password
+   (Get token at: Settings → Developer settings → Personal access tokens)
+❌ Script won't run → Try: chmod +x setup_github.sh
+
+═══════════════════════════════════════════════════════════════
+
+Need more help? Read GITHUB_SETUP.md for detailed instructions!
