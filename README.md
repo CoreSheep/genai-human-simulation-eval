@@ -143,7 +143,7 @@ Our framework captures all these dimensions.
 
 ### Benchmark Context
 
-The referenced paper achieved **85% accuracy** vs. human test-retest reliability on the General Social Survey. We use this as a gold standard (8.5/10 score) for comparison.
+The referenced paper achieved **85% accuracy** in replicating participants' responses on the General Social Survey—matching how accurately participants replicate their own answers two weeks later. This represents a test-retest reliability benchmark for overall response consistency.
 
 ### Small Dataset Considerations
 
