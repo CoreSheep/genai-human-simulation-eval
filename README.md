@@ -103,7 +103,7 @@ outputs/
 
 ```
 ├── data/
-│   └── RB_GenAI_Datatest.xlsx      # Input dataset
+│   └── RB_GenAI_Datatest.xlsx      # Input dataset (3 people × 10 questions)
 ├── src/
 │   ├── data_loader.py               # Data loading and structuring
 │   ├── evaluators/
@@ -171,11 +171,11 @@ EVALUATION SUMMARY
   Naturalness: 5.7/10
 ```
 
-## Deliverables
+## Project Outputs
 
-1. ✅ **Code**: Complete, professional implementation
-2. ✅ **Technical Report**: 2-page PDF with visualizations and insights
-3. ⏳ **Pitch Deck**: (To be created based on specific requirements)
+- **Code**: Complete, professional implementation
+- **Technical Report**: 2-page PDF with visualizations and insights
+- **Executive Presentation**: Apple-style pitch deck
 
 ## Development
 
@@ -204,4 +204,4 @@ For questions or issues, refer to the technical report or evaluation results.
 
 ---
 
-*Developed for Roland Berger GenAI Assignment*
+*Multi-dimensional evaluation framework for AI-generated human simulations*

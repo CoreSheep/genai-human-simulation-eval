@@ -4,10 +4,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Roland Berger GenAI Assignment evaluating the performance of generative agent simulations (human simulations). The goal is to assess how accurately LLM-based human simulations mimic real human behavior based on interview responses.
+This project evaluates the performance of generative agent simulations (AI-generated human simulations). The goal is to assess how accurately LLM-based human simulations mimic real human behavior based on interview responses.
 
 **Context:**
-- Client: Beauty & Wellbeing company targeting young business professionals
+- Domain: Beauty & Wellbeing market research
 - Approach: Based on paper "Generative Agent Simulations of 1,000 People" (https://arxiv.org/pdf/2411.10109)
 - Data: 3 human participants, 10 open-ended questions each
 - Comparison: Human responses vs. AI-generated human simulation responses
@@ -23,15 +23,13 @@ Columns:
 - Human Answer: Real human response
 - AI Answer: Human simulation response
 
-## Deliverables
+## Project Outputs
 
-The assignment requires three outputs:
+The project includes three main components:
 
 1. **Code**: Source code implementing evaluation methodology
 2. **Technical Report**: 2-page PDF with evaluation concept, results, insights
-3. **Pitch Slide Deck**: 3 core slides (+ intro/appendix) in strategy consultancy style for CEO presentation
-
-**Submission:** hannes.gerstel@rolandberger.com within 24 hours (recommended: 8 hours)
+3. **Executive Presentation**: Slide deck in professional consultancy style
 
 ## Evaluation Requirements
 

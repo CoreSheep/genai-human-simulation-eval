@@ -17,8 +17,8 @@ fi
 
 # Prompt for GitHub username and repo name
 read -p "Enter your GitHub username: " GITHUB_USERNAME
-read -p "Enter repository name (default: roland-berger-genai-evaluation): " REPO_NAME
-REPO_NAME=${REPO_NAME:-roland-berger-genai-evaluation}
+read -p "Enter repository name (default: genai-human-simulation-eval): " REPO_NAME
+REPO_NAME=${REPO_NAME:-genai-human-simulation-eval}
 
 echo ""
 echo "Setting up repository: https://github.com/$GITHUB_USERNAME/$REPO_NAME"

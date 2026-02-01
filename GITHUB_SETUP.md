@@ -13,7 +13,7 @@ This guide will help you create a GitHub repository for this project in just a f
 
 1. **Go to GitHub**: Visit https://github.com/new
 2. **Fill in the details**:
-   - **Repository name**: `roland-berger-genai-evaluation` (or your choice)
+   - **Repository name**: `genai-human-simulation-eval` (or your choice)
    - **Description**: `Multi-dimensional evaluation framework for assessing AI-generated human simulations`
    - **Visibility**: 
      - ✅ **Public** - Great for your portfolio, shows your work to potential employers
