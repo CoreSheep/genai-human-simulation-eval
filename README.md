@@ -110,7 +110,7 @@ outputs/
 
 ```
 ├── data/
-│   └── RB_GenAI_Datatest.xlsx      # Input dataset (3 people × 10 questions)
+│   └── your_dataset.xlsx           # Input dataset (not included in repo)
 ├── src/
 │   ├── data_loader.py               # Data loading and structuring
 │   ├── evaluators/
@@ -148,11 +148,23 @@ The referenced paper achieved **85% accuracy** in replicating participants' resp
 
 ### Small Dataset Considerations
 
-With only 30 samples (3 people × 10 questions):
+With small datasets (e.g., 30 samples from 3 people × 10 questions):
 - Use robust, interpretable metrics
 - Provide per-person and per-category breakdowns
 - Report confidence intervals where appropriate
 - Focus on practical insights over statistical significance
+
+## Data Requirements
+
+The framework expects an Excel file with the following columns:
+- `id`: Unique identifier for each response pair
+- `person_id`: Identifier for each participant
+- `question_category`: Category/type of question
+- `question`: The question text
+- `human_answers`: Actual human responses
+- `ai_answers`: AI-generated simulation responses
+
+Place your dataset as `data/your_dataset.xlsx` and update the path in `evaluate.py` if needed.
 
 ## Example Results
 

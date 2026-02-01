@@ -97,6 +97,11 @@ src/pitch_deck_generator.py
 src/report_generator.py
 src/word_report_generator.py
 
+# Data files (confidential)
+data/
+*.xlsx
+*.csv
+
 # Logs
 *.log
 logs/
