@@ -87,6 +87,12 @@ RB_GenAI_Assignment.docx
 CLAUDE.md
 EVALUATION_SUMMARY.md
 FINAL_DELIVERABLES.md
+GITHUB_SETUP.md
+GITHUB_READY.md
+GITHUB_FILES_SUMMARY.txt
+QUICK_START_GITHUB.txt
+setup_github.sh
+preflight_check.sh
 src/pitch_deck_generator.py
 src/report_generator.py
 src/word_report_generator.py
