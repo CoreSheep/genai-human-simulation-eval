@@ -6,6 +6,14 @@ Professional evaluation framework for assessing LLM-based human simulations agai
 
 This solution evaluates how accurately AI-generated human simulations mimic real human behavior in market research interviews. It uses a **multi-dimensional evaluation framework** inspired by the paper "Generative Agent Simulations of 1,000 People" (arXiv:2411.10109).
 
+### Evaluation Results
+
+![Multi-Dimensional Overview](outputs/figures/overview_scores.png)
+*Multi-dimensional evaluation across semantic, stylistic, and LLM-as-judge dimensions*
+
+![Performance by Category](outputs/figures/category_performance.png)
+*Performance breakdown across different question categories*
+
 ## Evaluation Framework
 
 ### Core Dimensions
