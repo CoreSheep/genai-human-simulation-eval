@@ -9,9 +9,9 @@ This solution evaluates how accurately AI-generated human simulations mimic real
 ### Evaluation Results
 
 <p align="center">
-  <img src="outputs/figures/overview_scores.png" alt="Multi-Dimensional Overview" width="600"/>
+  <img src="outputs/figures/dimension_comparison.png" alt="Performance Across Dimensions" width="700"/>
   <br>
-  <em>Multi-dimensional evaluation across semantic, stylistic, and LLM-as-judge dimensions</em>
+  <em>Performance comparison across semantic, stylistic, and LLM-as-judge evaluation dimensions</em>
 </p>
 
 <p align="center">
