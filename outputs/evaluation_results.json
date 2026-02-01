@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "evaluation_date": "2026-02-01T15:50:46.378934",
+    "evaluation_date": "2026-02-01T20:13:01.249538",
     "total_pairs": 30,
     "num_persons": 3,
     "num_categories": 4,
@@ -19,40 +19,43 @@
       "mean_length_similarity": 0.5642997432731566,
       "mean_complexity_similarity": 0.31770489880529584,
       "mean_formality_similarity": 0.8392489554682959,
-      "mean_style_score": 0.6003009748108543,
-      "pct_with_imperfections": 0.0
+      "mean_style_score": 0.7054410540443716,
+      "pct_with_imperfections": 0.0,
+      "mean_sentiment_similarity": 0.9148811004747016,
+      "mean_emotional_tone_match": 0.9083444444444445,
+      "mean_subjectivity_similarity": 0.8329921042141281
     },
     "llm_judge": {
       "count": 30,
-      "mean_semantic_match": 4.033333333333333,
-      "std_semantic_match": 2.0733762053445313,
-      "mean_style_match": 3.066666666666667,
-      "std_style_match": 1.364632632697248,
-      "mean_personality_match": 2.1666666666666665,
-      "std_personality_match": 1.1279282877125754,
-      "mean_naturalness": 3.9,
-      "std_naturalness": 1.2206555615733703,
-      "mean_overall_score": 3.2916666666666665,
-      "std_overall_score": 1.1745270915942676,
+      "mean_semantic_match": 4.1,
+      "std_semantic_match": 2.071231517720798,
+      "mean_style_match": 3.1666666666666665,
+      "std_style_match": 1.4395215254459457,
+      "mean_personality_match": 2.3,
+      "std_personality_match": 1.2688577540449522,
+      "mean_naturalness": 4.0,
+      "std_naturalness": 1.2110601416389966,
+      "mean_overall_score": 3.3916666666666666,
+      "std_overall_score": 1.2326856407409348,
       "common_weaknesses": [
         {
-          "weakness": "Uses formal, complete sentences instead of casual, lowercase style",
+          "weakness": "Overly formal and structured compared to human's casual style",
+          "count": 2
+        },
+        {
+          "weakness": "Overly formal and polished language lacking casual typos/errors",
           "count": 1
         },
         {
-          "weakness": "No typos or imperfect spelling (human wrote 'discouns')",
+          "weakness": "Added criteria (ingredients, one-stop shopping) not mentioned by human",
           "count": 1
         },
         {
-          "weakness": "Adds unmentioned concerns about 'non-harmful ingredients'",
+          "weakness": "Reversed priority of online vs. stores",
           "count": 1
         },
         {
-          "weakness": "Overly structured and explanatory compared to human's brief response",
-          "count": 1
-        },
-        {
-          "weakness": "Mentions supermarkets which human didn't reference",
+          "weakness": "Generic, impersonal tone vs. human's casual voice",
           "count": 1
         }
       ]
@@ -62,100 +65,81 @@
     "c_human": {
       "count": 10,
       "mean_semantic_similarity": 0.4718939125537872,
-      "mean_style_score": 0.5462925984668018,
-      "mean_llm_score": 3.15,
+      "mean_style_score": 0.6612061760732739,
+      "mean_llm_score": 3.225,
       "std_semantic": 0.1470227180881103,
-      "std_style": 0.13692854248910727
+      "std_style": 0.09647910039594236
     },
     "s_human": {
       "count": 10,
       "mean_semantic_similarity": 0.5456557080149651,
-      "mean_style_score": 0.6006064487529811,
-      "mean_llm_score": 2.85,
+      "mean_style_score": 0.7011154595823145,
+      "mean_llm_score": 3.075,
       "std_semantic": 0.20202431296843967,
-      "std_style": 0.12361503771404735
+      "std_style": 0.09126689596383104
     },
     "g_human": {
       "count": 10,
       "mean_semantic_similarity": 0.5499558061361313,
-      "mean_style_score": 0.6540038772127794,
+      "mean_style_score": 0.7540015264775259,
       "mean_llm_score": 3.875,
       "std_semantic": 0.1157460731477432,
-      "std_style": 0.1569502012795436
+      "std_style": 0.10383644729066585
     }
   },
   "per_category_analysis": {
     "shopping behavior": {
       "count": 9,
       "mean_semantic_similarity": 0.4877626763449775,
-      "mean_style_score": 0.6124874339185796,
-      "mean_llm_score": 3.4166666666666665,
+      "mean_style_score": 0.7106867140692834,
+      "mean_llm_score": 3.611111111111111,
       "std_semantic": 0.15080069013729633,
-      "std_style": 0.1822106214455714
+      "std_style": 0.12962485915879324
     },
     "product preferences": {
       "count": 15,
       "mean_semantic_similarity": 0.5874281903107961,
-      "mean_style_score": 0.5962734642405053,
-      "mean_llm_score": 3.1166666666666667,
+      "mean_style_score": 0.7076687834190232,
+      "mean_llm_score": 3.2,
       "std_semantic": 0.14095751274389412,
-      "std_style": 0.14123660181306444
+      "std_style": 0.10237447983668316
     },
     "influences": {
       "count": 3,
       "mean_semantic_similarity": 0.26605500280857086,
-      "mean_style_score": 0.610023257327094,
+      "mean_style_score": 0.7111551874244121,
       "mean_llm_score": 2.5833333333333335,
       "std_semantic": 0.07419792444131827,
-      "std_style": 0.010837630121948674
+      "std_style": 0.015477621479548226
     },
     "brand loyalty": {
       "count": 3,
       "mean_semantic_similarity": 0.5585341056187948,
-      "mean_style_score": 0.5741568678231821,
+      "mean_style_score": 0.6728512937163366,
       "mean_llm_score": 4.5,
       "std_semantic": 0.027536668690755654,
-      "std_style": 0.11882094676756974
+      "std_style": 0.0701850198414982
     }
   },
   "weakest_matches": [
-    {
-      "pair_id": 10,
-      "person_id": "c_human",
-      "question": "which personal care products, if any, do you regularly buy in larger/bulk quantities?",
-      "category": "shopping behavior",
-      "composite_score": 0.33416324809063436,
-      "semantic_score": 0.5403933525085449,
-      "style_score": 0.2643587848932676,
-      "llm_score": 0.175,
-      "human_answer": "i don't usually buy in bulk, but rather as soon as i need them.",
-      "ai_answer": "i regularly buy toothpaste and deodorant in bulk these are essential items in my daily routine, and buying them in larger quantities helps me save money and avoid running out",
-      "issues": [
-        "Directly contradicts the human's actual behavior (buying in bulk vs. not buying in bulk)",
-        "Uses overly formal, complete sentences unlike the human's casual style",
-        "Lacks punctuation matching (human uses minimal punctuation)",
-        "Provides detailed reasoning that the human didn't offer",
-        "Misses the human's lowercase writing preference",
-        "Generates a generic 'helpful consumer' response instead of the human's simple, direct answer"
-      ]
-    },
     {
       "pair_id": 11,
       "person_id": "s_human",
       "question": "which personal care products, if any, do you regularly buy in larger/bulk quantities?",
       "category": "shopping behavior",
-      "composite_score": 0.3394068591445134,
+      "composite_score": 0.37024521707809277,
       "semantic_score": 0.29796266555786133,
-      "style_score": 0.5217712177121772,
+      "style_score": 0.609880811808118,
       "llm_score": 0.175,
       "human_answer": "body wash, hand wash, thats it. i do not like to buy face products in big sizes or hair shampoo. i hate that. ",
       "ai_answer": "i regularly buy the aha, bha, pha toner from 'some by mi' and the niacinamide serum from axis-y in bulk these products are essential for my skincare routine, and i like to ensure i always have a consistent supply plus, they work really well for my oily, acne-prone skin \ud83d\ude0a",
       "issues": [
-        "Completely misunderstood the human's preferences - talks about bulk-buying face products when human explicitly hates that",
-        "Overly detailed and enthusiastic about specific product names and brands when human gave a simple, dismissive response",
-        "Uses polished, marketing-like language ('essential for my skincare routine') versus human's casual, negative tone",
-        "Adds emoji and positive tone when human expressed frustration/dislike",
-        "Provides elaborate justification for bulk buying when human kept response minimal"
+        "Completely contradicts the human's stated preferences about face products",
+        "Adds specific product details (brands, ingredients) never mentioned by the human",
+        "Uses overly enthusiastic tone with emoji vs human's blunt, negative tone",
+        "Provides detailed skincare routine information vs human's minimal response",
+        "Misses the human's strong negative emotion ('i hate that')",
+        "Creates fictional preferences that directly oppose the human's actual behavior"
       ]
     },
     {
@@ -163,20 +147,19 @@
       "person_id": "s_human",
       "question": "if you could choose one celebrity to represent a brand of men's or women's skin and body care products that inspires you to make a purchase, who would that celebrity be and why?",
       "category": "influences",
-      "composite_score": 0.3413708083441449,
+      "composite_score": 0.3743421931892364,
       "semantic_score": 0.16237132251262665,
-      "style_score": 0.598688129899216,
+      "style_score": 0.6928920865994774,
       "llm_score": 0.25,
       "human_answer": "i do not know, it really depends on the day, it changes all the time, but if i had to pick one, i would go with keira knightley, just because i like her in general :)",
       "ai_answer": "i would choose hyram yarbro to represent a brand of skincare products he\u2019s known for his dedication to skincare, transparency about ingredients, and practical advice, which aligns perfectly with my values and needs plus, he often recommends effective, natural, and organic products that suit my skin type",
       "issues": [
-        "Completely different celebrity choice (Keira Knightley vs Hyram Yarbro)",
-        "AI is overly confident and detailed while human is uncertain and brief",
-        "Missing the casual, indecisive personality ('i do not know, it really depends on the day')",
-        "No punctuation or capitalization to match human's informal style",
-        "AI provides elaborate justification while human gives simple reason ('just because i like her')",
-        "Missing the emoticon/casual warmth of the human response",
-        "AI sounds like a marketing pitch rather than a casual personal preference"
+        "Chose a niche influencer instead of mainstream celebrity like the human did",
+        "Overly detailed and rational explanation vs human's simple 'I like her'",
+        "Missing casual punctuation and emoticon usage",
+        "No expression of uncertainty or indecisiveness",
+        "Too polished and structured compared to human's stream-of-consciousness style",
+        "Focuses on technical aspects (ingredients, skin type) while human focuses on personal preference"
       ]
     },
     {
@@ -184,19 +167,19 @@
       "person_id": "c_human",
       "question": "Which out of the following type of body lotion you would prefer and why? Option 1 \u2013 Dove Body Love Nourished\nRadiance Body Lotion Option 2 \u2013 Dove Body Love Light Hydration Body Lotion Option 3 \u2013 Dove Body Love Pro Age\nBody Lotion for Mature Skin Option 4 \u2013 Dove Body Love Supple Bounce Body Lotion",
       "category": "product preferences",
-      "composite_score": 0.3901955100634245,
+      "composite_score": 0.41832185498844854,
       "semantic_score": 0.29526400566101074,
-      "style_score": 0.498151737377345,
-      "llm_score": 0.375,
+      "style_score": 0.5999412943059852,
+      "llm_score": 0.35,
       "human_answer": "i would chose option 2",
       "ai_answer": "I\u2019d probably go for Option 2 \u2013 Dove Body Love Light Hydration Body Lotion. It sounds like it\u2019s perfect for daily use, providing just the right amount of hydration without feeling too heavy. I\u2019m not really after something super rich or intense, so a light hydration option is ideal. Plus, it\u2019s something I can use every day without worrying about feeling greasy or sticky\u2014just smooth and soft skin!",
       "issues": [
         "Massive over-elaboration compared to human's minimal response",
-        "Uses proper capitalization and punctuation while human doesn't",
-        "Provides detailed reasoning when human offers none",
-        "Sounds like a product review rather than casual preference",
-        "Too polished and articulate compared to human's casual style",
-        "Adds assumptions about texture preferences not present in human response"
+        "Perfect grammar and punctuation vs human's casual lowercase style",
+        "Provides detailed reasoning when human offered none",
+        "Uses marketing-speak phrases like 'smooth and soft skin'",
+        "Completely misses the human's terse, low-effort communication style",
+        "Adds unnecessary enthusiasm and exclamation marks"
       ]
     },
     {
@@ -204,19 +187,39 @@
       "person_id": "c_human",
       "question": "if you could choose one celebrity to represent a brand of men's or women's skin and body care products that inspires you to make a purchase, who would that celebrity be and why?",
       "category": "influences",
-      "composite_score": 0.40123790822319083,
+      "composite_score": 0.43731628660156924,
       "semantic_score": 0.30392298102378845,
-      "style_score": 0.6067567567567568,
+      "style_score": 0.7098378378378379,
       "llm_score": 0.275,
       "human_answer": "it would need to be a well-known celebreity, probably starring in movies which is handsome and lean. maybe something like jacob elordi or christian bale.",
       "ai_answer": "i'd choose emma watson she's known for her practical approach to personal care, advocates for sustainability, and uses products with non-harmful ingredients her consistency and health-conscious choices align with my values",
       "issues": [
-        "Wrong gender celebrity chosen",
-        "Too polished and formal compared to human's casual style",
-        "No typos or lowercase text like human",
-        "Focuses on values/sustainability instead of physical appearance",
-        "More elaborate reasoning than human's simple preference",
-        "Lacks the tentative 'maybe' quality of human response"
+        "Chose opposite gender celebrity than human specified",
+        "Focused on values/ethics rather than physical appearance",
+        "Used formal, polished language vs human's casual style",
+        "No typos or grammatical errors unlike human",
+        "Missing punctuation throughout unlike human's periods",
+        "Gave detailed reasoning vs human's brief surface-level response"
+      ]
+    },
+    {
+      "pair_id": 10,
+      "person_id": "c_human",
+      "question": "which personal care products, if any, do you regularly buy in larger/bulk quantities?",
+      "category": "shopping behavior",
+      "composite_score": 0.4373897231864198,
+      "semantic_score": 0.5403933525085449,
+      "style_score": 0.4735772851669403,
+      "llm_score": 0.275,
+      "human_answer": "i don't usually buy in bulk, but rather as soon as i need them.",
+      "ai_answer": "i regularly buy toothpaste and deodorant in bulk these are essential items in my daily routine, and buying them in larger quantities helps me save money and avoid running out",
+      "issues": [
+        "Completely contradicts the human's actual behavior (doesn't buy bulk vs. regularly buys bulk)",
+        "Missing all punctuation marks while human uses periods",
+        "More verbose and explanatory compared to human's brief response",
+        "Uses formal phrases like 'essential items in my daily routine' vs. human's casual tone",
+        "Provides reasoning/justification while human simply states their behavior",
+        "Fails to use lowercase 'i' which the human consistently uses"
       ]
     }
   ],
@@ -379,240 +382,330 @@
         "length_similarity": 0.5251572327044025,
         "complexity_similarity": 0,
         "formality_similarity": 1.0,
-        "style_consistency_score": 0.5575471698113208,
-        "has_human_like_imperfections": false
+        "style_consistency_score": 0.6764147798742138,
+        "has_human_like_imperfections": false,
+        "sentiment_similarity": 0.8854166666666666,
+        "emotional_tone_match": 0.962,
+        "subjectivity_similarity": 0.8875000000000001
       },
       {
         "length_ratio": 2.0437158469945356,
         "length_similarity": 0.48930481283422456,
         "complexity_similarity": 0,
         "formality_similarity": 1.0,
-        "style_consistency_score": 0.5467914438502673,
-        "has_human_like_imperfections": false
+        "style_consistency_score": 0.6367510058568882,
+        "has_human_like_imperfections": false,
+        "sentiment_similarity": 0.7914502164502164,
+        "emotional_tone_match": 0.8706666666666667,
+        "subjectivity_similarity": 0.6731601731601732
       },
       {
         "length_ratio": 0.9530516431924883,
         "length_similarity": 0.9530516431924883,
         "complexity_similarity": 0.48936974789915977,
         "formality_similarity": 1.0,
-        "style_consistency_score": 0.8327264173274944,
-        "has_human_like_imperfections": false
+        "style_consistency_score": 0.8657398337738853,
+        "has_human_like_imperfections": false,
+        "sentiment_similarity": 0.9777777777777777,
+        "emotional_tone_match": 0.878,
+        "subjectivity_similarity": 0.888888888888889
       },
       {
         "length_ratio": 2.9456521739130435,
         "length_similarity": 0.3394833948339483,
         "complexity_similarity": 0,
         "formality_similarity": 0.6485260770975056,
-        "style_consistency_score": 0.36125544928918674,
-        "has_human_like_imperfections": false
+        "style_consistency_score": 0.5343281982411661,
+        "has_human_like_imperfections": false,
+        "sentiment_similarity": 0.885,
+        "emotional_tone_match": 0.8486666666666667,
+        "subjectivity_similarity": 0.7452380952380953
       },
       {
         "length_ratio": 3.5533980582524274,
         "length_similarity": 0.2814207650273224,
         "complexity_similarity": 0,
         "formality_similarity": 1.0,
-        "style_consistency_score": 0.48442622950819675,
-        "has_human_like_imperfections": false
+        "style_consistency_score": 0.6376841530054644,
+        "has_human_like_imperfections": false,
+        "sentiment_similarity": 0.95,
+        "emotional_tone_match": 0.9426666666666667,
+        "subjectivity_similarity": 0.9
       },
       {
         "length_ratio": 1.4866310160427807,
         "length_similarity": 0.6726618705035972,
         "complexity_similarity": 0,
         "formality_similarity": 0.6774193548387097,
-        "style_consistency_score": 0.47276630308656303,
-        "has_human_like_imperfections": false
+        "style_consistency_score": 0.6108538794770636,
+        "has_human_like_imperfections": false,
+        "sentiment_similarity": 0.8583333333333334,
+        "emotional_tone_match": 0.902,
+        "subjectivity_similarity": 0.83
       },
       {
         "length_ratio": 2.952830188679245,
         "length_similarity": 0.3386581469648562,
         "complexity_similarity": 0,
         "formality_similarity": 1.0,
-        "style_consistency_score": 0.5015974440894568,
-        "has_human_like_imperfections": false
+        "style_consistency_score": 0.6125649627263046,
+        "has_human_like_imperfections": false,
+        "sentiment_similarity": 0.8516666666666667,
+        "emotional_tone_match": 0.83,
+        "subjectivity_similarity": 0.9080952380952381
       },
       {
         "length_ratio": 2.5,
         "length_similarity": 0.4,
         "complexity_similarity": 0,
         "formality_similarity": 1.0,
-        "style_consistency_score": 0.52,
-        "has_human_like_imperfections": false
+        "style_consistency_score": 0.6694666666666667,
+        "has_human_like_imperfections": false,
+        "sentiment_similarity": 0.9958333333333333,
+        "emotional_tone_match": 0.9353333333333333,
+        "subjectivity_similarity": 0.7416666666666667
       },
       {
         "length_ratio": 0.7589743589743589,
         "length_similarity": 0.7589743589743589,
         "complexity_similarity": 0,
         "formality_similarity": 0.6923076923076923,
-        "style_consistency_score": 0.5046153846153846,
-        "has_human_like_imperfections": false
+        "style_consistency_score": 0.6569289377289377,
+        "has_human_like_imperfections": false,
+        "sentiment_similarity": 0.9892857142857143,
+        "emotional_tone_match": 0.8946666666666667,
+        "subjectivity_similarity": 0.9914399092970522
       },
       {
         "length_ratio": 2.761904761904762,
         "length_similarity": 0.3620689655172413,
         "complexity_similarity": 0.13817460317460295,
         "formality_similarity": 0.2857142857142858,
-        "style_consistency_score": 0.2643587848932676,
-        "has_human_like_imperfections": false
+        "style_consistency_score": 0.4735772851669403,
+        "has_human_like_imperfections": false,
+        "sentiment_similarity": 0.875,
+        "emotional_tone_match": 0.8473333333333334,
+        "subjectivity_similarity": 0.9692307692307692
       },
       {
         "length_ratio": 2.463636363636364,
         "length_similarity": 0.40590405904059046,
         "complexity_similarity": 0,
         "formality_similarity": 1.0,
-        "style_consistency_score": 0.5217712177121772,
-        "has_human_like_imperfections": false
+        "style_consistency_score": 0.609880811808118,
+        "has_human_like_imperfections": false,
+        "sentiment_similarity": 0.7437499999999999,
+        "emotional_tone_match": 0.8663333333333333,
+        "subjectivity_similarity": 0.7067307692307692
       },
       {
         "length_ratio": 1.293193717277487,
         "length_similarity": 0.7732793522267206,
         "complexity_similarity": 0.16522583559168902,
         "formality_similarity": 0.7222222222222222,
-        "style_consistency_score": 0.5704404452344118,
-        "has_human_like_imperfections": false
+        "style_consistency_score": 0.7106494502620946,
+        "has_human_like_imperfections": false,
+        "sentiment_similarity": 0.9982142857142857,
+        "emotional_tone_match": 0.9516666666666667,
+        "subjectivity_similarity": 0.7126831501831502
       },
       {
         "length_ratio": 1.4509803921568627,
         "length_similarity": 0.6891891891891893,
         "complexity_similarity": 0,
         "formality_similarity": 1.0,
-        "style_consistency_score": 0.6067567567567568,
-        "has_human_like_imperfections": false
+        "style_consistency_score": 0.7098378378378379,
+        "has_human_like_imperfections": false,
+        "sentiment_similarity": 0.875,
+        "emotional_tone_match": 0.98,
+        "subjectivity_similarity": 0.8
       },
       {
         "length_ratio": 1.8313253012048192,
         "length_similarity": 0.5460526315789473,
         "complexity_similarity": 0.11624113475177289,
         "formality_similarity": 1.0,
-        "style_consistency_score": 0.598688129899216,
-        "has_human_like_imperfections": false
+        "style_consistency_score": 0.6928920865994774,
+        "has_human_like_imperfections": false,
+        "sentiment_similarity": 0.8416666666666666,
+        "emotional_tone_match": 0.9473333333333334,
+        "subjectivity_similarity": 0.8333333333333333
       },
       {
         "length_ratio": 1.2378378378378379,
         "length_similarity": 0.8078602620087336,
         "complexity_similarity": 0.7027941176470591,
         "formality_similarity": 0.4285714285714286,
-        "style_consistency_score": 0.6246248853253092,
-        "has_human_like_imperfections": false
+        "style_consistency_score": 0.7307356378359205,
+        "has_human_like_imperfections": false,
+        "sentiment_similarity": 0.9738095238095238,
+        "emotional_tone_match": 0.8446666666666667,
+        "subjectivity_similarity": 0.9337301587301587
       },
       {
         "length_ratio": 1.3312883435582823,
         "length_similarity": 0.7511520737327189,
         "complexity_similarity": 0.12482182244278983,
         "formality_similarity": 1.0,
-        "style_consistency_score": 0.6627921688526526,
-        "has_human_like_imperfections": false
+        "style_consistency_score": 0.7679947792351018,
+        "has_human_like_imperfections": false,
+        "sentiment_similarity": 0.99,
+        "emotional_tone_match": 0.9653333333333334,
+        "subjectivity_similarity": 0.7316666666666667
       },
       {
         "length_ratio": 1.4866310160427807,
         "length_similarity": 0.6726618705035972,
         "complexity_similarity": 0,
         "formality_similarity": 1.0,
-        "style_consistency_score": 0.6017985611510792,
-        "has_human_like_imperfections": false
+        "style_consistency_score": 0.7239918979102433,
+        "has_human_like_imperfections": false,
+        "sentiment_similarity": 0.979047619047619,
+        "emotional_tone_match": 0.9576666666666667,
+        "subjectivity_similarity": 0.9614285714285714
       },
       {
         "length_ratio": 0.9923371647509579,
         "length_similarity": 0.9923371647509579,
         "complexity_similarity": 0,
         "formality_similarity": 0.5121951219512195,
-        "style_consistency_score": 0.5025791982057752,
-        "has_human_like_imperfections": false
+        "style_consistency_score": 0.6726778295996126,
+        "has_human_like_imperfections": false,
+        "sentiment_similarity": 0.9983080808080808,
+        "emotional_tone_match": 0.9766666666666667,
+        "subjectivity_similarity": 0.8085353535353536
       },
       {
         "length_ratio": 4.598130841121495,
         "length_similarity": 0.217479674796748,
         "complexity_similarity": 0.7683355119825711,
         "formality_similarity": 0.8765432098765432,
-        "style_consistency_score": 0.6463618399844131,
-        "has_human_like_imperfections": false
+        "style_consistency_score": 0.7368988398249996,
+        "has_human_like_imperfections": false,
+        "sentiment_similarity": 0.8875,
+        "emotional_tone_match": 0.954,
+        "subjectivity_similarity": 0.9097402597402596
       },
       {
         "length_ratio": 1.0676691729323309,
         "length_similarity": 0.9366197183098591,
         "complexity_similarity": 0.5514800724637681,
         "formality_similarity": 1.0,
-        "style_consistency_score": 0.8464299372320881,
-        "has_human_like_imperfections": false
+        "style_consistency_score": 0.8788782914880587,
+        "has_human_like_imperfections": false,
+        "sentiment_similarity": 0.9947916666666666,
+        "emotional_tone_match": 0.882,
+        "subjectivity_similarity": 0.9805555555555555
       },
       {
         "length_ratio": 1.1221122112211221,
         "length_similarity": 0.8911764705882352,
         "complexity_similarity": 0.7272156084656085,
         "formality_similarity": 0.8148148148148149,
-        "style_consistency_score": 0.8114435496420791,
-        "has_human_like_imperfections": false
+        "style_consistency_score": 0.8713792816116345,
+        "has_human_like_imperfections": false,
+        "sentiment_similarity": 0.9979858104858105,
+        "emotional_tone_match": 0.9626666666666667,
+        "subjectivity_similarity": 0.9719456469456469
       },
       {
         "length_ratio": 18.045454545454547,
         "length_similarity": 0.055415617128463435,
         "complexity_similarity": 0.2717568407960199,
         "formality_similarity": 1.0,
-        "style_consistency_score": 0.498151737377345,
-        "has_human_like_imperfections": false
+        "style_consistency_score": 0.5999412943059852,
+        "has_human_like_imperfections": false,
+        "sentiment_similarity": 0.8350340136054422,
+        "emotional_tone_match": 0.7833333333333333,
+        "subjectivity_similarity": 0.39268707482993204
       },
       {
         "length_ratio": 3.006289308176101,
         "length_similarity": 0.33263598326359833,
         "complexity_similarity": 0.9863546061884666,
         "formality_similarity": 1.0,
-        "style_consistency_score": 0.7956971768356195,
-        "has_human_like_imperfections": false
+        "style_consistency_score": 0.8372466027388978,
+        "has_human_like_imperfections": false,
+        "sentiment_similarity": 0.9742424242424242,
+        "emotional_tone_match": 0.8573333333333333,
+        "subjectivity_similarity": 0.7257575757575758
       },
       {
         "length_ratio": 0.9228187919463087,
         "length_similarity": 0.9228187919463087,
         "complexity_similarity": 0.7039583333333335,
         "formality_similarity": 0.6153846153846154,
-        "style_consistency_score": 0.7341869837377388,
-        "has_human_like_imperfections": false
+        "style_consistency_score": 0.8041961367252115,
+        "has_human_like_imperfections": false,
+        "sentiment_similarity": 0.9319727891156463,
+        "emotional_tone_match": 0.924,
+        "subjectivity_similarity": 0.7472789115646259
       },
       {
         "length_ratio": 4.394495412844036,
         "length_similarity": 0.2275574112734864,
         "complexity_similarity": 0.8829703898050975,
         "formality_similarity": 1.0,
-        "style_consistency_score": 0.7331583403235752,
-        "has_human_like_imperfections": false
+        "style_consistency_score": 0.7562680602157168,
+        "has_human_like_imperfections": false,
+        "sentiment_similarity": 0.7203125,
+        "emotional_tone_match": 0.9339999999999999,
+        "subjectivity_similarity": 0.8510416666666667
       },
       {
         "length_ratio": 1.8905109489051095,
         "length_similarity": 0.528957528957529,
         "complexity_similarity": 0,
         "formality_similarity": 0.7222222222222222,
-        "style_consistency_score": 0.4475761475761476,
-        "has_human_like_imperfections": false
+        "style_consistency_score": 0.5845581724581725,
+        "has_human_like_imperfections": false,
+        "sentiment_similarity": 0.8680555555555556,
+        "emotional_tone_match": 0.8306666666666667,
+        "subjectivity_similarity": 0.9916666666666666
       },
       {
         "length_ratio": 1.6181818181818182,
         "length_similarity": 0.6179775280898876,
         "complexity_similarity": 0.8068571428571429,
         "formality_similarity": 0.2857142857142858,
-        "style_consistency_score": 0.5417361155698235,
-        "has_human_like_imperfections": false
+        "style_consistency_score": 0.6777276484751205,
+        "has_human_like_imperfections": false,
+        "sentiment_similarity": 0.9376607142857143,
+        "emotional_tone_match": 0.892,
+        "subjectivity_similarity": 0.8964940476190476
       },
       {
         "length_ratio": 10.181818181818182,
         "length_similarity": 0.0982142857142857,
         "complexity_similarity": 0.8104955808080806,
         "formality_similarity": 0.8958333333333334,
-        "style_consistency_score": 0.6309462932900433,
-        "has_human_like_imperfections": false
+        "style_consistency_score": 0.7442357233044734,
+        "has_human_like_imperfections": false,
+        "sentiment_similarity": 0.9481770833333334,
+        "emotional_tone_match": 0.9926666666666667,
+        "subjectivity_similarity": 0.9010777417027416
       },
       {
         "length_ratio": 2.897810218978102,
         "length_similarity": 0.34508816120906805,
         "complexity_similarity": 0.46453065134099614,
         "formality_similarity": 1.0,
-        "style_consistency_score": 0.6428856437650192,
-        "has_human_like_imperfections": false
+        "style_consistency_score": 0.7398049072911577,
+        "has_human_like_imperfections": false,
+        "sentiment_similarity": 0.9489057239057239,
+        "emotional_tone_match": 0.9206666666666666,
+        "subjectivity_similarity": 0.6652356902356902
       },
       {
         "length_ratio": 1.00418410041841,
         "length_similarity": 0.9958333333333333,
         "complexity_similarity": 0.8205649646107179,
         "formality_similarity": 1.0,
-        "style_consistency_score": 0.9449194893832155,
-        "has_human_like_imperfections": false
+        "style_consistency_score": 0.93912662928578,
+        "has_human_like_imperfections": false,
+        "sentiment_similarity": 0.9422348484848485,
+        "emotional_tone_match": 0.916,
+        "subjectivity_similarity": 0.9329545454545454
       }
     ],
     "llm_judge": [
@@ -622,31 +715,30 @@
         "personality_match": 2.0,
         "naturalness": 3.0,
         "overall_score": 3.25,
-        "explanation": "The AI response diverges significantly from the human's casual, typo-filled answer. While both mention online shopping, the human emphasizes flexibility and discounts while the AI focuses on convenience and ingredient safety. The AI's formal, polished style with proper punctuation contrasts sharply with the human's informal writing.",
+        "explanation": "The AI response diverges significantly from the human's casual, typo-filled answer. While both mention online shopping, the human prioritizes online for flexibility and discounts, occasionally buying in stores. The AI reverses this, emphasizing stores first and adding unmentioned criteria like 'non-harmful ingredients' and 'one-stop shopping.' The AI's formal, error-free prose contrasts sharply with the human's informal style.",
         "ai_weaknesses": [
-          "Uses formal, complete sentences instead of casual, lowercase style",
-          "No typos or imperfect spelling (human wrote 'discouns')",
-          "Adds unmentioned concerns about 'non-harmful ingredients'",
-          "Overly structured and explanatory compared to human's brief response",
-          "Mentions supermarkets which human didn't reference",
-          "Lacks the spontaneous feel of 'when i see something interesting'"
+          "Overly formal and polished language lacking casual typos/errors",
+          "Added criteria (ingredients, one-stop shopping) not mentioned by human",
+          "Reversed priority of online vs. stores",
+          "Generic, impersonal tone vs. human's casual voice",
+          "Missing punctuation throughout but in an artificial way",
+          "Failed to capture the spontaneous 'when i see something interesting' aspect"
         ]
       },
       {
         "semantic_match": 6.0,
         "style_match": 3.0,
-        "personality_match": 2.0,
-        "naturalness": 3.0,
-        "overall_score": 3.5,
-        "explanation": "While both responses mention Korean skincare and online shopping, the AI response is significantly more elaborate and polished. The human uses casual, fragmented language with specific store names (dm) and simple reasoning, while the AI provides detailed justifications, multiple store names, and overly articulate explanations that feel rehearsed rather than conversational.",
+        "personality_match": 4.0,
+        "naturalness": 4.0,
+        "overall_score": 4.25,
+        "explanation": "While both responses mention Korean skincare and online shopping (yesstyle), the AI adds significant details not present in the human response (soko glam, free samples, ingredient lists, transparency) and completely omits the human's mention of buying body products at supermarkets/drugstores like dm. The writing styles are drastically different - the human uses casual, conversational language with minimal punctuation, while the AI writes in polished, complete sentences with proper punctuation and an emoji. The AI response feels generic and overly detailed compared to the human's straightforward, practical answer.",
         "ai_weaknesses": [
-          "Overly detailed and articulate compared to human's casual style",
-          "Added unnecessary information about free samples and ingredient lists not mentioned by human",
-          "Used emoji which human didn't use",
-          "Failed to mention physical stores for body products which was key part of human response",
-          "Too polished with perfect punctuation versus human's casual lowercase style",
-          "Added second store (soko glam) not mentioned by human",
-          "Sounds like marketing copy rather than casual conversation"
+          "Added multiple details and justifications not present in human response",
+          "Missed the distinction between face products (online) and body products (physical stores)",
+          "Used formal, polished writing style vs human's casual, minimal punctuation style",
+          "Included emoji which human didn't use",
+          "Failed to mention specific store 'dm' that human referenced",
+          "Overly enthusiastic and explanatory tone compared to human's matter-of-fact response"
         ]
       },
       {
@@ -655,14 +747,14 @@
         "personality_match": 5.0,
         "naturalness": 6.0,
         "overall_score": 6.0,
-        "explanation": "The AI captures the core concept of buying personal care products at the supermarket for convenience, but misses key details like 'when products are close to empty,' 'during grocery shopping,' and 'time-efficient.' The writing style is more fragmented with missing punctuation, while the human uses proper sentence structure. The AI adds new elements about brands and seeing products that weren't in the original.",
+        "explanation": "The AI captures the core fact that both shop at supermarkets for convenience, but misses key details like 'when products are close to empty' and 'during grocery shopping.' The human's response is more structured and specific, while the AI's is more casual but lacks the human's systematic approach. The AI adds details about brands and seeing products that weren't in the original.",
         "ai_weaknesses": [
-          "Missing punctuation throughout the response",
-          "Doesn't mention the timing aspect (when products are running low)",
-          "Adds rationale about brands and product visualization not present in human response",
-          "Less specific about it being during regular grocery shopping",
-          "Lacks the personal efficiency focus of the human response",
-          "More generic reasoning vs. the human's specific time-efficiency concern"
+          "Missing the specific timing detail about purchasing when items are 'close to being empty'",
+          "Lacks the efficiency-focused mindset shown in 'time-efficient' and combining with grocery shopping",
+          "No punctuation or capitalization, which differs from the human's proper punctuation",
+          "Adds rationale about 'brands I recognize and trust' not present in human response",
+          "Less organized thought structure - human response flows more logically",
+          "Missing the specificity of 'nearest full-service supermarket'"
         ]
       },
       {
@@ -671,47 +763,44 @@
         "personality_match": 2.0,
         "naturalness": 5.0,
         "overall_score": 3.5,
-        "explanation": "The AI response fundamentally misunderstands the human's stance. The human explicitly states they don't know brands and just buy what's affordable and functional. The AI invents specific preferences (sunscreen, no bad scent, friend recommendations) that contradict the human's brand-agnostic approach. While both use lowercase and casual style, the AI is more verbose and specific where the human is notably brief and dismissive.",
+        "explanation": "The AI response completely misses the human's key points: not knowing brands and prioritizing affordability/functionality. Instead, the AI invents specific details about sunscreen, scent preferences, and friend recommendations that the human never mentioned. The human expresses brand ignorance while the AI discusses brand selection criteria.",
         "ai_weaknesses": [
-          "Adds specific product details (sunscreen) not mentioned by human",
-          "Claims to have preferences when human explicitly doesn't know brands",
-          "Too detailed and explanatory compared to human's terse response",
-          "Invents decision criteria (friends' recommendations) absent from human response",
-          "Misses the human's indifferent/dismissive attitude toward the topic"
+          "Adds fabricated details (sunscreen, scent, friend recommendations) not present in human response",
+          "Misses the human's explicit statement about not knowing brands",
+          "Over-explains with multiple criteria when human gives simple, brief answer",
+          "Uses more formal/structured language vs human's casual tone",
+          "Fails to capture the human's indifference/pragmatic attitude toward skincare"
         ]
       },
       {
         "semantic_match": 8.0,
-        "style_match": 4.0,
-        "personality_match": 3.0,
-        "naturalness": 3.0,
-        "overall_score": 4.5,
-        "explanation": "The AI captures the same Korean brands and sunscreen focus, but adds excessive detail about specific products and skin concerns that the human never mentioned. The human's response is extremely brief and casual, while the AI's is verbose and over-explanatory. The AI completely misses the casual, minimalist communication style of the human.",
+        "style_match": 6.0,
+        "personality_match": 5.0,
+        "naturalness": 5.0,
+        "overall_score": 6.0,
+        "explanation": "The AI captures the core brands mentioned (with minor spelling variation 'some by mi' vs 'some by me') and adds plausible product details. However, it significantly expands beyond the human's brief response, adding specific products, skin type information, and ingredient preferences that weren't mentioned. The human's response is notably terse and focused only on face products, while the AI creates a more comprehensive, explanatory response.",
         "ai_weaknesses": [
-          "Added specific product details (AHA/BHA/PHA toner, niacinamide serum) not mentioned by human",
-          "Invented skin type information (oily, acne-prone) not provided by human",
-          "Used formal product reasoning (transparency, natural/organic) absent from human response",
-          "Corrected brand spelling ('some by mi' vs human's 'some by me')",
-          "Lacks punctuation and capitalization matching human's casual style",
-          "Response is 3x longer than human's brief answer",
-          "Added justifications and explanations where human gave none"
+          "Over-elaboration: adds specific products (toner, serum) not mentioned by human",
+          "Invents personal details about skin type (oily, acne-prone) not in original",
+          "Too polished: lacks the casual punctuation and lowercase style of human",
+          "Adds rationale about ingredients and organic preferences not present in original",
+          "More structured and complete sentences vs human's brief, casual style"
         ]
       },
       {
-        "semantic_match": 6.0,
+        "semantic_match": 7.0,
         "style_match": 3.0,
         "personality_match": 2.0,
-        "naturalness": 4.0,
+        "naturalness": 3.0,
         "overall_score": 3.75,
-        "explanation": "While both responses mention similar brands (Nivea/niveau and no-name brands), the AI fundamentally misunderstands the human's uncertainty and casual approach. The human admits not being confident about their brand choice and seems indifferent, while the AI presents as a confident, brand-loyal consumer with clear preferences and reasoning.",
+        "explanation": "The AI captures the basic facts (Nivea brand, no-name alternatives) but transforms the human's uncertainty and casual tone into a confident, polished response. The human admits not being '100% confident' and thinks it might be 'niveau' (misspelling), while the AI confidently states preferences and rationales. The writing styles are completely different - human uses lowercase, informal punctuation, and uncertain language vs AI's formal, structured sentences.",
         "ai_weaknesses": [
-          "Completely misses the human's uncertainty ('not 100% confident')",
-          "Lacks the casual lowercase style and informal punctuation",
-          "Adds confident reasoning ('reliable', 'effective over time') not present in human response",
-          "Missing the specific detail about 'current bottle' vs 'previous one'",
-          "Transforms an uncertain, casual response into a polished consumer testimonial",
-          "No punctuation throughout entire response unlike human's use of periods",
-          "Incorrectly spells 'niveau' as 'nivea' (different brand)"
+          "Removes all uncertainty and hesitation present in human response",
+          "Uses proper capitalization and punctuation unlike the human",
+          "Adds confident reasoning ('reliable', 'effective over time') not present in original",
+          "Transforms tentative brand identification into definitive preference",
+          "Lacks the casual, uncertain tone and misspelling that characterize the human response",
+          "Creates a generic consumer rationale instead of matching the human's admitted lack of brand awareness"
         ]
       },
       {
@@ -720,15 +809,14 @@
         "personality_match": 2.0,
         "naturalness": 3.0,
         "overall_score": 3.25,
-        "explanation": "The AI response covers similar topics (size, materials) but is far more formal, detailed, and structured than the human's casual response. The human mentions smell and makes a joke, while the AI focuses on sustainability and functionality in a corporate tone.",
+        "explanation": "The AI response covers similar topics (size, materials) but is far more formal and comprehensive than the human's casual, brief answer. The human mentions smell and makes a joke, while the AI focuses on sustainability and functionality in a corporate tone.",
         "ai_weaknesses": [
-          "Overly formal and structured language lacking casual conversational flow",
-          "Missing the human's humor ('of course it needs to clean the body haha')",
-          "No mention of scent/smell which was important to the human",
-          "Uses corporate buzzwords like 'sustainability' and 'biodegradable'",
-          "Perfect punctuation and grammar unlike the human's casual style",
-          "Provides unnecessary detail about pump/squeeze bottles and usage instructions",
-          "Lacks personality and sounds like a product review rather than personal preference"
+          "Overly formal and structured language vs human's casual tone",
+          "Missing the humor ('haha') and personality of the human",
+          "Too comprehensive and detailed compared to human's brief response",
+          "Lacks punctuation errors and casual flow of human writing",
+          "Doesn't mention smell/fragrance which human prioritized",
+          "Sounds like a product description rather than personal preference"
         ]
       },
       {
@@ -741,10 +829,10 @@
         "ai_weaknesses": [
           "Added specific volume (250-300ml) contradicting human's 'big size' preference",
           "Overly formal and structured compared to human's casual style",
-          "Added many unprompted details (pump dispenser, ingredients, usage instructions)",
-          "Lacks the human's characteristic lowercase writing and informal punctuation",
-          "Missed the human's emphasis on minimalistic design",
-          "Too polished and comprehensive versus human's brief, direct response"
+          "Added many unprompted details (pump dispenser, ingredients, instructions)",
+          "Missed the human's emphasis on 'minimalistic' design",
+          "Used proper punctuation and capitalization unlike the human",
+          "Failed to capture the human's brief, direct communication style"
         ]
       },
       {
@@ -753,45 +841,14 @@
         "personality_match": 2.0,
         "naturalness": 3.0,
         "overall_score": 3.25,
-        "explanation": "The AI captures some basic preferences (larger bottle, minimalistic design) but misses critical details like pump dispensers, refillable bottles, travel-specific needs, and the human's indifference to ingredients. The writing style is formal and structured versus the human's casual, conversational tone with lowercase text and informal punctuation.",
+        "explanation": "The AI response captures some basic preferences (larger size, minimalistic design) but misses critical details like pump dispensers, refillable bottles, metal materials, and the distinction between home vs travel needs. The writing style is overly polished and lacks the casual, conversational tone of the human. The response feels generic and impersonal, missing the human's specific preferences and nuanced thinking.",
         "ai_weaknesses": [
-          "Completely misses the two-context distinction (home vs travel)",
-          "Omits specific dispenser preferences (pump for home, normal for travel)",
+          "Completely omits the home vs travel distinction that was central to the human's response",
+          "Missing specific details like pump dispenser, refillable bottles, and metal materials",
           "Contradicts human by emphasizing ingredient labeling when human explicitly doesn't care",
-          "Uses formal capitalization and punctuation versus human's casual lowercase style",
-          "Misses material preferences (metal for home, plastic for travel)",
-          "Generic, polished response lacking the human's conversational flow and personal touches"
-        ]
-      },
-      {
-        "semantic_match": 1.0,
-        "style_match": 2.0,
-        "personality_match": 1.0,
-        "naturalness": 3.0,
-        "overall_score": 1.75,
-        "explanation": "The AI response completely contradicts the human's answer. The human explicitly states they don't buy in bulk, while the AI claims to regularly buy items in bulk. The writing styles are also vastly different - the human uses casual, lowercase text with minimal punctuation, while the AI uses formal, complete sentences. The AI response reads like a generic, helpful answer rather than capturing any individual personality.",
-        "ai_weaknesses": [
-          "Directly contradicts the human's actual behavior (buying in bulk vs. not buying in bulk)",
-          "Uses overly formal, complete sentences unlike the human's casual style",
-          "Lacks punctuation matching (human uses minimal punctuation)",
-          "Provides detailed reasoning that the human didn't offer",
-          "Misses the human's lowercase writing preference",
-          "Generates a generic 'helpful consumer' response instead of the human's simple, direct answer"
-        ]
-      },
-      {
-        "semantic_match": 1.0,
-        "style_match": 2.0,
-        "personality_match": 1.0,
-        "naturalness": 3.0,
-        "overall_score": 1.75,
-        "explanation": "The AI response is completely contradictory to the human's actual preferences. The human explicitly states they hate buying face products in big sizes and only bulk-buy body wash and hand wash. The AI simulation describes enthusiastically bulk-buying specific face care products with detailed product names and reasons, which is the exact opposite of what the human said.",
-        "ai_weaknesses": [
-          "Completely misunderstood the human's preferences - talks about bulk-buying face products when human explicitly hates that",
-          "Overly detailed and enthusiastic about specific product names and brands when human gave a simple, dismissive response",
-          "Uses polished, marketing-like language ('essential for my skincare routine') versus human's casual, negative tone",
-          "Adds emoji and positive tone when human expressed frustration/dislike",
-          "Provides elaborate justification for bulk buying when human kept response minimal"
+          "Lacks lowercase casual writing style and punctuation patterns of the human",
+          "Too structured and formal compared to the human's stream-of-consciousness style",
+          "Generic response that could apply to anyone rather than capturing individual preferences"
         ]
       },
       {
@@ -800,14 +857,30 @@
         "personality_match": 2.0,
         "naturalness": 4.0,
         "overall_score": 2.75,
-        "explanation": "The AI response completely contradicts the human's actual behavior. The human explicitly states they almost always buy single items and rarely buy in bulk, while the AI claims to regularly buy products in bulk. The writing styles are also very different - the human uses casual, conversational language with lowercase text, while the AI writes in a more formal, structured way without punctuation. The AI completely misses the human's minimalist, just-in-time purchasing personality.",
+        "explanation": "The AI response directly contradicts the human's answer. The human explicitly states they don't buy in bulk, while the AI claims to regularly buy items in bulk. The writing styles are also very different - the human uses casual, lowercase text with minimal punctuation, while the AI uses more formal, structured language without any punctuation at all. The AI completely misses the human's personality and shopping habits.",
         "ai_weaknesses": [
-          "Directly contradicts the human's stated behavior (bulk buying vs single item purchasing)",
-          "Uses formal, structured language vs human's casual style",
-          "Lacks punctuation entirely while human uses periods",
-          "Provides specific brand names not mentioned by human",
-          "Misses the human's frugal/minimalist personality",
-          "Creates a completely fictional purchasing pattern"
+          "Completely contradicts the human's actual behavior (doesn't buy bulk vs. regularly buys bulk)",
+          "Missing all punctuation marks while human uses periods",
+          "More verbose and explanatory compared to human's brief response",
+          "Uses formal phrases like 'essential items in my daily routine' vs. human's casual tone",
+          "Provides reasoning/justification while human simply states their behavior",
+          "Fails to use lowercase 'i' which the human consistently uses"
+        ]
+      },
+      {
+        "semantic_match": 1.0,
+        "style_match": 2.0,
+        "personality_match": 1.0,
+        "naturalness": 3.0,
+        "overall_score": 1.75,
+        "explanation": "The AI response is completely contradictory to the human's actual preferences. The human explicitly states they hate buying face products in big sizes and only bulk-buy body wash and hand wash. The AI response enthusiastically discusses bulk-buying specific face care products with detailed product names and skin type information, which is the exact opposite of what the human said.",
+        "ai_weaknesses": [
+          "Completely contradicts the human's stated preferences about face products",
+          "Adds specific product details (brands, ingredients) never mentioned by the human",
+          "Uses overly enthusiastic tone with emoji vs human's blunt, negative tone",
+          "Provides detailed skincare routine information vs human's minimal response",
+          "Misses the human's strong negative emotion ('i hate that')",
+          "Creates fictional preferences that directly oppose the human's actual behavior"
         ]
       },
       {
@@ -816,14 +889,31 @@
         "personality_match": 2.0,
         "naturalness": 4.0,
         "overall_score": 2.75,
-        "explanation": "The AI completely misses the mark by choosing a female celebrity (Emma Watson) when the human specifically chose male celebrities for what appears to be men's products. The human's response is casual and brief with lowercase text and typos, while the AI's is polished and structured. The human focuses on physical attributes (handsome, lean) while the AI focuses on values and sustainability.",
+        "explanation": "The AI response completely contradicts the human's actual behavior. The human explicitly states they almost always buy single items and rarely buy in bulk, while the AI claims to regularly buy products in bulk. The writing styles are also vastly different - the human uses lowercase, conversational tone with specific details about their shopping habits, while the AI uses a more formal, structured response without punctuation. The AI completely misses the human's cautious, minimalist approach to shopping.",
         "ai_weaknesses": [
-          "Wrong gender celebrity chosen",
-          "Too polished and formal compared to human's casual style",
-          "No typos or lowercase text like human",
-          "Focuses on values/sustainability instead of physical appearance",
-          "More elaborate reasoning than human's simple preference",
-          "Lacks the tentative 'maybe' quality of human response"
+          "Directly contradicts the human's stated behavior (buying bulk vs. single items)",
+          "Missing punctuation throughout the entire response",
+          "Too formal and structured compared to human's casual style",
+          "Provides specific product names when human gave none",
+          "Lacks the human's explanatory tone about their shopping habits",
+          "No mention of discounts which was important to the human",
+          "Presents a convenience-focused shopper vs. the human's just-in-time approach"
+        ]
+      },
+      {
+        "semantic_match": 2.0,
+        "style_match": 3.0,
+        "personality_match": 2.0,
+        "naturalness": 4.0,
+        "overall_score": 2.75,
+        "explanation": "The AI response completely misses the mark. The human chose male celebrities (Jacob Elordi, Christian Bale) while the AI chose a female celebrity (Emma Watson). The human focused on physical attributes (handsome, lean) while the AI focused on values (sustainability, health-conscious). The writing styles are also vastly different - the human uses casual, fragmented language with typos while the AI writes in polished, complete sentences without punctuation.",
+        "ai_weaknesses": [
+          "Chose opposite gender celebrity than human specified",
+          "Focused on values/ethics rather than physical appearance",
+          "Used formal, polished language vs human's casual style",
+          "No typos or grammatical errors unlike human",
+          "Missing punctuation throughout unlike human's periods",
+          "Gave detailed reasoning vs human's brief surface-level response"
         ]
       },
       {
@@ -832,15 +922,14 @@
         "personality_match": 1.0,
         "naturalness": 4.0,
         "overall_score": 2.5,
-        "explanation": "The AI response completely misses the human's indecisive, casual approach. The human admits uncertainty and picks someone they simply 'like in general' with a smiley face, while the AI gives a detailed, confident answer about a skincare influencer with specific reasoning about ingredients and values. The responses are fundamentally different in content, tone, and personality.",
+        "explanation": "The AI response completely misses the human's casual, indecisive tone and chooses a skincare influencer instead of a traditional celebrity. The human expresses uncertainty and picks based on general liking, while the AI gives a detailed, rational explanation focused on expertise and values. The writing styles are opposites - casual vs formal, brief vs detailed.",
         "ai_weaknesses": [
-          "Completely different celebrity choice (Keira Knightley vs Hyram Yarbro)",
-          "AI is overly confident and detailed while human is uncertain and brief",
-          "Missing the casual, indecisive personality ('i do not know, it really depends on the day')",
-          "No punctuation or capitalization to match human's informal style",
-          "AI provides elaborate justification while human gives simple reason ('just because i like her')",
-          "Missing the emoticon/casual warmth of the human response",
-          "AI sounds like a marketing pitch rather than a casual personal preference"
+          "Chose a niche influencer instead of mainstream celebrity like the human did",
+          "Overly detailed and rational explanation vs human's simple 'I like her'",
+          "Missing casual punctuation and emoticon usage",
+          "No expression of uncertainty or indecisiveness",
+          "Too polished and structured compared to human's stream-of-consciousness style",
+          "Focuses on technical aspects (ingredients, skin type) while human focuses on personal preference"
         ]
       },
       {
@@ -849,13 +938,14 @@
         "personality_match": 1.0,
         "naturalness": 4.0,
         "overall_score": 2.5,
-        "explanation": "The AI completely misses the human's core message. The human explicitly states they can't think of a celebrity and expresses skepticism about celebrity endorsements due to makeup/polish. The AI instead enthusiastically names David Beckham and provides marketing-speak justification. The writing styles are also vastly different - the human uses lowercase, informal language with personal reasoning, while the AI uses proper punctuation and promotional language.",
+        "explanation": "The AI completely misses the human's core message. The human explicitly states they can't think of a celebrity and expresses skepticism about celebrity endorsements due to makeup/polish. The AI instead confidently names David Beckham with detailed reasoning. The writing styles are also vastly different - the human uses lowercase, informal punctuation, and a skeptical tone, while the AI uses proper capitalization and a promotional tone.",
         "ai_weaknesses": [
-          "Completely contradicts the human's stance by naming a celebrity when the human said they couldn't think of one",
-          "Misses the human's skepticism about celebrity authenticity",
-          "Uses polished marketing language vs. the human's casual, lowercase style",
-          "Provides enthusiastic endorsement when the human expressed doubt",
-          "Lacks the personal, reflective tone of the human response"
+          "Completely contradicts the human's inability to name a celebrity",
+          "Misses the skeptical, critical tone about celebrity endorsements",
+          "Uses formal capitalization and punctuation unlike the human's casual style",
+          "Provides enthusiastic endorsement when human expresses distrust",
+          "Lacks the human's personal touch about not meeting celebrities in real life",
+          "Sounds like marketing copy rather than genuine personal opinion"
         ]
       },
       {
@@ -864,14 +954,14 @@
         "personality_match": 2.0,
         "naturalness": 3.0,
         "overall_score": 2.5,
-        "explanation": "The AI response contradicts the human's core message. The human explicitly states they've never switched brands and have no reason to, while the AI claims they did switch for better ingredients. The writing styles are completely different - the human uses casual, conversational language with personal details about their mother, while the AI uses formal, generic statements. The AI completely misses the personal, nostalgic tone of sticking with what mom bought.",
+        "explanation": "The AI response contradicts the human's core message. The human explicitly states they've never switched brands and have been using the same one for ~10 years since their mother bought it. The AI claims they switched brands for better ingredients, which is completely opposite. The writing style is also very different - the human uses casual, conversational language with personal details while the AI uses formal, generic statements without punctuation.",
         "ai_weaknesses": [
-          "Directly contradicts the human's experience of never switching brands",
-          "Missing punctuation and casual flow of human speech",
+          "Contradicts the human's actual experience (claims switching when human never switched)",
+          "Missing punctuation entirely while human uses commas and question marks",
           "Lacks personal anecdotes (mother buying toothpaste)",
-          "Too formal and generic compared to human's casual 'since forever' tone",
-          "Fails to capture the indifference/habit-based reasoning of the human",
-          "Invents a switching experience that never happened"
+          "Too formal and generic compared to human's casual tone",
+          "Doesn't capture the uncertainty/approximation in timeframe ('something like 10 years?')",
+          "Missing typos that make human response authentic ('toothpase')"
         ]
       },
       {
@@ -880,14 +970,14 @@
         "personality_match": 2.0,
         "naturalness": 4.0,
         "overall_score": 2.75,
-        "explanation": "The AI response fundamentally misunderstands the human's relationship with toothpaste. The human explicitly states they don't care about brands and their boyfriend buys it, while the AI claims to have been using the same brand for two years and actively switched brands. The writing styles are completely different - the human uses casual, run-on sentences with 'tho' while the AI uses proper grammar with an emoji. The personalities are opposite: the human is indifferent and passive about toothpaste choices, while the AI presents as engaged and decisive.",
+        "explanation": "The AI response fundamentally misunderstands the human's relationship with toothpaste. The human explicitly states they don't care about brands and their boyfriend buys it, while the AI claims to have been using the same brand for two years and actively switched brands. The writing styles are completely different - the human uses casual, run-on sentences with 'tho' while the AI uses proper punctuation and adds an emoji. The personalities are opposite: the human is indifferent and passive about toothpaste choices, while the AI presents as engaged and deliberate.",
         "ai_weaknesses": [
           "Contradicts the human's stated indifference to toothpaste brands",
-          "Invents a specific timeline (two years) when human provides none",
-          "Uses overly proper grammar without punctuation vs human's casual style",
-          "Adds emoji which doesn't match human's tone",
-          "Presents as actively choosing toothpaste when human says boyfriend buys it",
-          "Misses the human's passive, indifferent attitude entirely"
+          "Claims personal agency in brand selection when human says boyfriend buys it",
+          "Uses overly proper grammar and punctuation compared to human's casual style",
+          "Adds emoji which human didn't use",
+          "Presents as actively engaged consumer vs human's passive approach",
+          "Provides specific timeframe (two years) when human gives no such detail"
         ]
       },
       {
@@ -896,14 +986,14 @@
         "personality_match": 2.0,
         "naturalness": 4.0,
         "overall_score": 2.75,
-        "explanation": "The AI response completely misses the human's key characteristic of not paying attention to toothpaste brands and rotating between multiple brands. Instead, it presents someone who is brand-loyal and has been using the same brand for years. The writing styles are also vastly different - the human uses casual, lowercase text with specific brand examples, while the AI uses more formal, structured sentences without punctuation.",
+        "explanation": "The AI response completely misses the human's casual, indifferent attitude toward toothpaste brands. While the human admits to not paying attention and likely rotating between brands, the AI portrays someone loyal to a specific brand for years. The writing styles are also vastly different - the human uses lowercase, informal language with specific brand examples, while the AI uses proper punctuation and generic statements.",
         "ai_weaknesses": [
-          "Contradicts the human's brand-agnostic behavior by claiming brand loyalty",
-          "Uses formal, punctuation-free writing style vs human's casual lowercase style",
-          "Misses the human's specific detail about buying toothpaste last week",
-          "Fails to mention the specific brands (Colgate, Elmex, Blend-a-med) that human rotates between",
-          "Creates a fictional narrative about friend recommendation that doesn't align with human's indifferent attitude",
-          "Lacks the parenthetical example structure used by the human"
+          "Contradicts the human's brand-switching behavior by claiming years of loyalty",
+          "Uses formal punctuation and capitalization unlike the human's casual lowercase style",
+          "Lacks specific brand names that the human provided",
+          "Presents a decisive, brand-conscious personality opposite to the human's indifference",
+          "Missing the human's uncertainty ('its rather likely', 'i think')",
+          "No mention of recent purchase or rotation between brands"
         ]
       },
       {
@@ -912,14 +1002,13 @@
         "personality_match": 3.0,
         "naturalness": 5.0,
         "overall_score": 3.5,
-        "explanation": "The AI response completely misses the human's core priorities. While the human emphasizes effectiveness, price, and sustainability in that order with a brief, pragmatic response, the AI provides an elaborate wishlist focusing on gentleness, specific ingredients, and sensory details the human never mentioned. The writing styles are drastically different - the human is terse and direct while the AI is verbose and enthusiastic.",
+        "explanation": "The AI response completely misses the human's focus on effectiveness and price, instead elaborating extensively on ingredients and features the human never mentioned. The human gave a brief, practical response while the AI provided a detailed, enthusiastic answer that reads like a beauty blog post.",
         "ai_weaknesses": [
+          "Completely ignores the human's concern about price/value",
           "Adds many specific details (aloe vera, chamomile, sulfates, parabens) never mentioned by human",
-          "Overly elaborate and enthusiastic tone vs human's matter-of-fact brevity",
-          "Prioritizes gentleness and moisturizing over human's focus on effectiveness",
-          "Completely ignores the price consideration which was important to human",
-          "Uses exclamation points and conversational fillers absent in human response",
-          "Transforms a 19-word pragmatic answer into a 75-word detailed wishlist"
+          "Writing style is overly detailed and enthusiastic vs human's concise, practical tone",
+          "Uses exclamation points and phrases like 'I'm all about' that don't match human's straightforward style",
+          "Focuses heavily on ingredients/features while human prioritized effectiveness and cost"
         ]
       },
       {
@@ -928,16 +1017,16 @@
         "personality_match": 1.0,
         "naturalness": 4.0,
         "overall_score": 2.5,
-        "explanation": "The AI completely misunderstood the human's priorities and preferences. The human focused on transparency (ingredient listing with effects), packaging (clear glass, minimalistic), texture (soft but not heavy), and scent (oud). The AI instead discussed generic eco-friendly ingredients and sustainability features that the human never mentioned. The writing styles are also vastly different - the human uses casual, fragmented sentences with typos while the AI produces polished, formal prose.",
+        "explanation": "The AI completely misunderstood the human's priorities and preferences. The human emphasized ingredient transparency, packaging details, texture, and a specific scent (oud), while the AI gave a generic response about organic ingredients and environmental concerns that the human never mentioned. The writing styles are also vastly different - the human writes in a casual, stream-of-consciousness style with typos, while the AI writes in polished, formal sentences.",
         "ai_weaknesses": [
-          "Completely missed the human's emphasis on ingredient transparency and labeling",
-          "Ignored specific preferences for clear glass bottle and minimalistic design",
-          "Failed to mention texture preferences (soft but not heavy)",
-          "Wrong scent preference (AI said lavender, human wanted oud)",
-          "Added eco-friendly focus that human didn't express",
-          "Too polished and formal compared to human's casual style with typos",
-          "Confused body wash with body lotion (human mentioned both)",
-          "Generic response lacking any personal quirks or individual voice"
+          "Missed the core requirement of ingredient transparency and labeling",
+          "Ignored specific preferences for glass bottle and minimalistic design",
+          "Failed to mention texture preferences which human called 'very important'",
+          "Completely wrong scent preference (lavender vs oud)",
+          "Added environmental concerns not mentioned by human",
+          "Overly polished writing style lacks the casual, authentic feel of human response",
+          "No typos or imperfections that make human response authentic",
+          "Generic 'perfect body wash' response rather than personalized preferences"
         ]
       },
       {
@@ -946,29 +1035,29 @@
         "personality_match": 1.0,
         "naturalness": 4.0,
         "overall_score": 2.5,
-        "explanation": "The AI response completely misses the human's key characteristic of not knowing about body wash ingredients. While the human explicitly states they've 'never spent effort on investigating ingredients' and therefore can't answer, the AI confidently lists specific ingredients like peppermint extract and shea butter. The human's response is casual and honest about their lack of knowledge, while the AI's is polished and knowledgeable. The only minor overlap is mentioning moisture/dryness concerns, but even this is expressed very differently.",
+        "explanation": "The AI response completely misses the human's key characteristic of not knowing about body wash ingredients. While the human explicitly states they've 'never spent effort on investigating ingredients' and thus can't answer, the AI confidently lists specific ingredients like peppermint extract and shea butter. The human's response is casual and honest about their lack of knowledge, while the AI's is polished and knowledgeable. The only slight overlap is mentioning moisture/dryness concerns, but even this is approached differently.",
         "ai_weaknesses": [
           "Provides specific ingredient knowledge when human admits having none",
-          "Uses polished, marketing-style language vs human's casual tone",
+          "Overly detailed and enthusiastic compared to human's simple, practical approach",
           "Adds eco-friendly concerns not mentioned by human",
-          "Misses the human's honest admission of ignorance",
-          "Overly detailed and enthusiastic compared to human's simple requirements"
+          "Uses marketing-style language ('deep moisture', 'pleasant daily ritual') versus human's plain speech",
+          "Misses the human's honest admission of ignorance as a key personality trait"
         ]
       },
       {
         "semantic_match": 8.0,
         "style_match": 2.0,
-        "personality_match": 2.0,
+        "personality_match": 1.0,
         "naturalness": 3.0,
-        "overall_score": 3.75,
-        "explanation": "While both responses choose Option 2, the AI simulation completely fails to match the human's extremely brief, casual style. The human gives a minimal 5-word response with no capitalization or explanation, while the AI provides an elaborate, well-structured paragraph with proper grammar and detailed reasoning. This represents a fundamental mismatch in communication style and personality.",
+        "overall_score": 3.5,
+        "explanation": "While both responses choose Option 2, the AI simulation completely fails to match the human's extremely brief, casual style. The human gives a minimal 5-word response with lowercase text and no punctuation, while the AI provides an elaborate, well-structured explanation with perfect grammar and multiple justifications. This represents a fundamental mismatch in communication style and personality.",
         "ai_weaknesses": [
           "Massive over-elaboration compared to human's minimal response",
-          "Uses proper capitalization and punctuation while human doesn't",
-          "Provides detailed reasoning when human offers none",
-          "Sounds like a product review rather than casual preference",
-          "Too polished and articulate compared to human's casual style",
-          "Adds assumptions about texture preferences not present in human response"
+          "Perfect grammar and punctuation vs human's casual lowercase style",
+          "Provides detailed reasoning when human offered none",
+          "Uses marketing-speak phrases like 'smooth and soft skin'",
+          "Completely misses the human's terse, low-effort communication style",
+          "Adds unnecessary enthusiasm and exclamation marks"
         ]
       },
       {
@@ -977,14 +1066,14 @@
         "personality_match": 2.0,
         "naturalness": 3.0,
         "overall_score": 2.5,
-        "explanation": "The AI and human responses are fundamentally different. The human chose two options (1 and 2) focusing simply on hydration and nourishment, while the AI chose only option 2 and added extensive reasoning about texture preferences, scent sensitivity, and sustainability values that the human never mentioned. The writing styles are completely different - the human uses casual, abbreviated language ('smth', 'desciption') with poor capitalization, while the AI writes in polished, formal sentences with perfect grammar.",
+        "explanation": "The AI and human responses are fundamentally different. The human chose options 1 AND 2, focusing simply on hydration and nourishment. The AI chose only option 2 and provided elaborate justifications about texture preferences, scent sensitivity, and sustainability values that the human never mentioned. The writing styles are completely different - the human uses casual, abbreviated language ('smth', 'desciption') with no capitalization, while the AI writes in formal, polished sentences with perfect grammar.",
         "ai_weaknesses": [
           "Chose only one option when human chose two",
-          "Added extensive reasoning about preferences never mentioned by human (scent sensitivity, sustainability, texture concerns)",
+          "Added extensive reasoning about scent sensitivity and sustainability not present in human response",
           "Used formal, polished language vs human's casual, abbreviated style",
-          "Failed to capture the simple, straightforward reasoning of the human",
-          "Overcomplicated a simple preference for hydration and nourishment",
-          "Perfect grammar and spelling vs human's casual errors"
+          "Failed to capture the simple, straightforward decision-making of the human",
+          "Overcomplicated a simple preference with elaborate justifications",
+          "Perfect grammar and capitalization vs human's casual typing style"
         ]
       },
       {
@@ -993,15 +1082,15 @@
         "personality_match": 1.0,
         "naturalness": 4.0,
         "overall_score": 2.5,
-        "explanation": "The AI response completely misses the human's key points: indifference to product names, preference for visual design, and reluctant selection. Instead, it provides enthusiastic product endorsement with specific features the human never mentioned. The writing styles are opposite - human uses lowercase, hesitant tone vs AI's confident, marketing-speak approach.",
+        "explanation": "The AI response completely misses the human's key points: indifference to product names, preference for visual design, and reluctant selection of the light hydration option. Instead, the AI confidently chooses a different product with specific reasons about texture and absorption that the human never mentioned. The writing styles are also vastly different - the human uses lowercase, informal language with hedging phrases while the AI uses proper capitalization and confident product-focused language.",
         "ai_weaknesses": [
-          "Chose different product (Pro Age vs Light Hydration)",
-          "Invented product features not mentioned by human",
+          "Chose wrong product (Pro Age vs Light Hydration)",
+          "Invented specific product attributes not mentioned by human",
           "Missed human's indifference to product names",
-          "Failed to capture human's focus on visual design",
-          "Used enthusiastic tone vs human's reluctant/indifferent tone",
-          "Provided detailed reasoning when human explicitly stated they don't pay attention to such details",
-          "Used proper capitalization vs human's consistent lowercase style"
+          "Failed to capture human's focus on visual design over names",
+          "Used confident, decisive tone vs human's uncertain, reluctant tone",
+          "Proper capitalization and punctuation vs human's casual lowercase style",
+          "No hedging language ('i don't really feel', 'i think', 'if I had to pick')"
         ]
       },
       {
@@ -1010,14 +1099,14 @@
         "personality_match": 2.0,
         "naturalness": 4.0,
         "overall_score": 3.75,
-        "explanation": "The AI captures the core factors (effectiveness, price, smell) but adds sustainability concerns not mentioned by the human. The human's response is extremely brief and casual with no punctuation, while the AI provides a lengthy, well-structured response with proper grammar and enthusiastic tone. The personalities are completely different - the human is terse and matter-of-fact, while the AI is chatty and elaborate.",
+        "explanation": "The AI captures the core factors (effectiveness, price, smell) but adds sustainability concerns not mentioned by the human. The human's response is extremely brief and casual with no capitalization or punctuation, while the AI writes in complete, well-structured sentences with proper grammar. The AI completely misses the human's direct, no-frills communication style.",
         "ai_weaknesses": [
           "Added sustainability concerns that human never mentioned",
-          "Much more verbose and elaborate than human's brief response",
-          "Used proper punctuation and capitalization while human used none",
-          "Enthusiastic and chatty tone vs human's flat, minimal response",
-          "Added specific details about skin irritation not in original",
-          "Failed to capture the 'as i said' reference suggesting this was a follow-up response"
+          "Used proper grammar and punctuation vs human's casual style",
+          "Expanded simple points into elaborate explanations",
+          "Failed to capture the human's extremely brief, direct communication pattern",
+          "Included filler phrases like 'I mean' and 'of course' that don't match human's straightforward style",
+          "Referenced 'as i said' callback that AI ignored"
         ]
       },
       {
@@ -1026,14 +1115,14 @@
         "personality_match": 2.0,
         "naturalness": 3.0,
         "overall_score": 2.5,
-        "explanation": "The AI response fundamentally misunderstands the human's attitude. The human explicitly states they 'do not care much of the brand' and focus only on product quality, while the AI describes someone highly brand-loyal with multiple specific criteria. The writing styles are completely different - the human uses casual, unpolished language with grammatical imperfections, while the AI uses formal, polished corporate-speak with buzzwords like 'sustainable packaging' and 'ethical practices.'",
+        "explanation": "The AI response completely misses the human's core message. The human explicitly states they don't care much about brands and only focus on product quality, while the AI lists multiple brand-related factors like values alignment, sustainability, and ethical practices. The writing styles are drastically different - the human uses casual, unpolished language with grammatical imperfections, while the AI produces a formal, structured response with marketing buzzwords.",
         "ai_weaknesses": [
-          "Completely inverts the human's brand indifference into brand loyalty",
-          "Uses formal, corporate language vs human's casual style",
-          "Adds multiple criteria (sustainability, ethics, packaging) never mentioned by human",
-          "Perfect grammar and structure vs human's natural imperfections",
-          "Sounds like marketing copy rather than authentic personal response",
-          "Misses the human's simple, pragmatic approach to purchasing"
+          "Contradicts human's brand-agnostic stance by emphasizing brand values and alignment",
+          "Uses corporate/marketing language ('clean and organic ingredients', 'sustainable packaging') vs human's simple language",
+          "Overly structured and comprehensive vs human's brief, casual response",
+          "Perfect grammar and punctuation vs human's lowercase, run-on sentence",
+          "Adds multiple criteria not mentioned by human (sustainability, ethics, packaging)",
+          "Misses the human's indifference to brand loyalty"
         ]
       },
       {
@@ -1045,9 +1134,9 @@
         "explanation": "The AI captures the core idea of not having a single favorite brand and mentions similar factors (price being key in both), but adds more detail than the human's concise response. The casual, lowercase style matches well, but the AI's response is more elaborate and explanatory where the human was brief and direct.",
         "ai_weaknesses": [
           "AI provides more detailed explanation than the human's terse response",
-          "AI mentions 'convenience' and 'easy to find' which weren't in human response",
-          "AI's response flows more smoothly/polished compared to human's abrupt structure",
-          "Human explicitly states inability to answer about loyalty factors, while AI proceeds to answer anyway"
+          "AI shifts from 'no favorite' to 'not a single favorite' which subtly changes the meaning",
+          "AI adds specific factors (convenience, past issues) that the human didn't mention",
+          "Human's response has a more definitive, almost dismissive tone that the AI softens"
         ]
       },
       {
@@ -1058,11 +1147,13 @@
         "overall_score": 3.5,
         "explanation": "The AI captures the core concepts of friends and social media but dramatically overexpands a simple 13-word response into a verbose 89-word essay. The human's casual, minimal style with no capitalization or punctuation is completely lost in favor of formal, structured sentences with proper grammar.",
         "ai_weaknesses": [
-          "Massive over-elaboration - adds details about trust, reviews, ads, influencers, ingredients, and price that weren't mentioned",
-          "Completely misses the casual, informal tone - uses proper capitalization and punctuation vs. human's lowercase style",
-          "Transforms a brief, offhand comment into a structured, thoughtful response",
-          "Adds specific criteria and reasoning that suggest much more consideration than the human expressed",
-          "Uses formal phrases like 'aligns with what I already like' vs. human's simple 'what i see is famous'"
+          "Extreme verbosity - expanded 13 words to 89 words",
+          "Added many concepts not present in original (reviews, ads, influencers, ingredients, price)",
+          "Formal writing style vs human's casual lowercase text",
+          "Perfect grammar and punctuation vs human's lack of both",
+          "Added justifications and explanations the human didn't provide",
+          "Structured response with clear topic sentences vs human's simple statement",
+          "Generic AI-style elaboration patterns ('What influences me to try something new?')"
         ]
       },
       {
@@ -1071,14 +1162,13 @@
         "personality_match": 2.0,
         "naturalness": 3.0,
         "overall_score": 2.75,
-        "explanation": "The AI response completely misses the casual, informal tone of the human. While both mention Instagram, the AI adds extensive criteria (organic, sustainable, minimalistic packaging) never mentioned by the human. The human focuses on people with similar skin issues and friends, while the AI talks about dermatologists and experts. The writing styles are polar opposites - the human uses lowercase, informal language with typos, while the AI writes in polished, marketing-speak sentences.",
+        "explanation": "The AI response completely misses the casual, conversational tone of the human. While both mention Instagram, the AI adds extensive criteria (organic, sustainable, minimalistic packaging) never mentioned by the human. The human focuses on people with similar skin issues and friends, while the AI emphasizes experts and research. The writing styles are drastically different - human uses lowercase, informal language with typos vs AI's polished, structured response.",
         "ai_weaknesses": [
-          "Overly polished and formal writing style vs human's casual lowercase text",
-          "Added extensive product criteria (organic, sustainable, etc.) not mentioned by human",
-          "Focused on experts/dermatologists instead of regular people with similar issues",
-          "Used exclamation point and enthusiastic tone vs human's matter-of-fact delivery",
-          "No typos or informal language patterns that characterize the human response",
-          "Expanded answer far beyond the simple, direct human response"
+          "Overly formal and structured compared to human's casual style",
+          "Added many criteria (organic, sustainable, packaging) not mentioned by human",
+          "Missed the personal connection aspect (people with same skin issues, friends)",
+          "Too polished - lacks the typos and informal flow of human response",
+          "Sounds like a marketing response rather than genuine personal experience"
         ]
       },
       {
@@ -1087,14 +1177,14 @@
         "personality_match": 4.0,
         "naturalness": 7.0,
         "overall_score": 5.5,
-        "explanation": "While both responses mention discovering products while shopping, the AI adds several elements not present in the human response (friend recommendations, budget considerations, scent/texture preferences) while missing key human elements (unintentional discovery, product design, brand recognition). The writing styles are somewhat similar in casualness but the AI is more structured and comprehensive.",
+        "explanation": "While both responses mention discovering products by chance while shopping, the AI adds several elements not present in the human response (friend recommendations, budget considerations, scent/texture preferences) while missing key elements the human mentioned (design influence, brand recognition). The writing styles are somewhat similar in casualness, but the AI's response is more structured and comprehensive, whereas the human's is more stream-of-consciousness.",
         "ai_weaknesses": [
-          "Adds decision criteria (budget, scent, texture) not mentioned by human",
+          "Adds decision factors (budget, scent, texture) not mentioned by the human",
           "Includes social discovery method (friends) absent from human response",
-          "Misses human's emphasis on visual design and brand recognition",
-          "More organized and complete than human's stream-of-consciousness style",
-          "Lacks the specific context of 'personal care section of supermarket'",
-          "Uses 'pick it up to see how it works' instead of human's focus on being 'influenced'"
+          "Misses the human's emphasis on visual design and brand recognition",
+          "More organized and complete sentences compared to human's looser structure",
+          "Lacks the specific context of 'personal care section of a supermarket'",
+          "Uses more varied vocabulary ('practical', 'within my usual budget') than the human's simpler word choices"
         ]
       }
     ]

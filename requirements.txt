@@ -16,3 +16,5 @@ aiohttp>=3.9.0
 tqdm>=4.66.0
 plotly>=5.18.0
 kaleido>=0.2.1
+textblob>=0.17.1
+vaderSentiment>=3.3.2

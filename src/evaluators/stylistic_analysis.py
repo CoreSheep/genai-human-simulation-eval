@@ -2,7 +2,7 @@
 Stylistic analysis evaluator for linguistic feature comparison.
 
 Measures how well the AI mimics the human's writing style, including
-length, complexity, formality, and natural imperfections.
+length, complexity, formality, natural imperfections, and emotional tone.
 """
 
 import re
@@ -11,6 +11,14 @@ import numpy as np
 from typing import Dict, List
 from dataclasses import dataclass
 from collections import Counter
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+
+# TextBlob is optional - use VADER as primary sentiment analyzer
+try:
+    from textblob import TextBlob
+    TEXTBLOB_AVAILABLE = True
+except:
+    TEXTBLOB_AVAILABLE = False
 
 
 @dataclass
@@ -28,6 +36,14 @@ class StylisticFeatures:
     has_typos: bool
     punctuation_density: float
     vocabulary_richness: float  # type-token ratio
+    
+    # Emotional/Sentiment features
+    sentiment_polarity: float  # -1 (negative) to 1 (positive)
+    sentiment_subjectivity: float  # 0 (objective) to 1 (subjective)
+    emotional_intensity: float  # 0 to 1 (compound VADER score normalized)
+    positive_emotion: float  # 0 to 1
+    negative_emotion: float  # 0 to 1
+    neutral_emotion: float  # 0 to 1
 
     def to_dict(self) -> Dict[str, any]:
         return self.__dict__
@@ -43,6 +59,11 @@ class StylisticAlignment:
     formality_similarity: float
     style_consistency_score: float  # Overall style match
     has_human_like_imperfections: bool
+    
+    # Emotional alignment
+    sentiment_similarity: float  # How similar are the sentiment polarities
+    emotional_tone_match: float  # Overall emotional alignment
+    subjectivity_similarity: float  # How similar in objectivity/subjectivity
 
     def to_dict(self) -> Dict[str, any]:
         return self.__dict__
@@ -53,7 +74,8 @@ class StylisticAnalyzer:
     Analyzes and compares stylistic features of responses.
 
     This evaluator is critical for human simulation because style often
-    reveals more about authenticity than semantic content alone.
+    reveals more about authenticity than semantic content alone. Now includes
+    emotional/sentiment analysis to capture the affective tone of responses.
     """
 
     # Informal markers (contractions, casual language)
@@ -69,6 +91,11 @@ class StylisticAnalyzer:
         r"\.{2,}",  # Multiple periods
         r"[a-z][A-Z]",  # Case inconsistency
     ]
+    
+    def __init__(self):
+        """Initialize sentiment analyzers."""
+        self.vader = SentimentIntensityAnalyzer()
+
 
     def extract_features(self, text: str) -> StylisticFeatures:
         """
@@ -92,7 +119,10 @@ class StylisticAnalyzer:
                 sentence_count=0, avg_sentence_length=0,
                 flesch_reading_ease=0, flesch_kincaid_grade=0,
                 formality_score=0, has_typos=False,
-                punctuation_density=0, vocabulary_richness=0
+                punctuation_density=0, vocabulary_richness=0,
+                sentiment_polarity=0, sentiment_subjectivity=0,
+                emotional_intensity=0, positive_emotion=0,
+                negative_emotion=0, neutral_emotion=0
             )
 
         avg_word_length = np.mean([len(w) for w in words])
@@ -123,6 +153,37 @@ class StylisticAnalyzer:
         # Vocabulary richness (type-token ratio)
         unique_words = len(set(w.lower() for w in words))
         vocab_richness = unique_words / word_count if word_count > 0 else 0
+        
+        # Emotional/Sentiment Analysis
+        # Use TextBlob if available, otherwise use VADER for polarity estimation
+        if TEXTBLOB_AVAILABLE:
+            try:
+                blob = TextBlob(text)
+                polarity = blob.sentiment.polarity  # -1 to 1
+                subjectivity = blob.sentiment.subjectivity  # 0 to 1
+            except:
+                polarity = 0
+                subjectivity = 0.5
+        else:
+            # Estimate from VADER compound score
+            polarity = 0
+            subjectivity = 0.5
+        
+        # VADER for more nuanced emotion detection (works without downloads)
+        try:
+            vader_scores = self.vader.polarity_scores(text)
+            emotional_intensity = (vader_scores['compound'] + 1) / 2  # Normalize to 0-1
+            positive = vader_scores['pos']
+            negative = vader_scores['neg']
+            neutral = vader_scores['neu']
+            # Use VADER compound for polarity if TextBlob not available
+            if not TEXTBLOB_AVAILABLE:
+                polarity = vader_scores['compound']
+        except:
+            emotional_intensity = 0.5
+            positive = 0
+            negative = 0
+            neutral = 1.0
 
         return StylisticFeatures(
             length=length,
@@ -135,7 +196,13 @@ class StylisticAnalyzer:
             formality_score=formality,
             has_typos=has_typos,
             punctuation_density=punct_density,
-            vocabulary_richness=vocab_richness
+            vocabulary_richness=vocab_richness,
+            sentiment_polarity=polarity,
+            sentiment_subjectivity=subjectivity,
+            emotional_intensity=emotional_intensity,
+            positive_emotion=positive,
+            negative_emotion=negative,
+            neutral_emotion=neutral
         )
 
     def _compute_formality(self, text: str) -> float:
@@ -213,12 +280,29 @@ class StylisticAnalyzer:
         # Formality similarity
         formality_diff = abs(human_features.formality_score - ai_features.formality_score)
         formality_similarity = 1 - formality_diff
+        
+        # Emotional/Sentiment alignment
+        # Sentiment polarity similarity (both on -1 to 1 scale)
+        sentiment_diff = abs(human_features.sentiment_polarity - ai_features.sentiment_polarity)
+        sentiment_similarity = 1 - (sentiment_diff / 2)  # Normalize to 0-1
+        
+        # Subjectivity similarity
+        subjectivity_diff = abs(human_features.sentiment_subjectivity - ai_features.sentiment_subjectivity)
+        subjectivity_similarity = 1 - subjectivity_diff
+        
+        # Emotional tone match (considering positive, negative, neutral distributions)
+        pos_diff = abs(human_features.positive_emotion - ai_features.positive_emotion)
+        neg_diff = abs(human_features.negative_emotion - ai_features.negative_emotion)
+        neu_diff = abs(human_features.neutral_emotion - ai_features.neutral_emotion)
+        emotional_tone_match = 1 - ((pos_diff + neg_diff + neu_diff) / 3)
 
-        # Overall style consistency
+        # Overall style consistency (now includes emotional alignment)
         style_score = (
-            length_similarity * 0.3 +
-            complexity_similarity * 0.3 +
-            formality_similarity * 0.4
+            length_similarity * 0.20 +
+            complexity_similarity * 0.20 +
+            formality_similarity * 0.25 +
+            sentiment_similarity * 0.20 +
+            emotional_tone_match * 0.15
         )
 
         # Check for human-like imperfections
@@ -233,7 +317,10 @@ class StylisticAnalyzer:
             complexity_similarity=complexity_similarity,
             formality_similarity=formality_similarity,
             style_consistency_score=style_score,
-            has_human_like_imperfections=has_imperfections
+            has_human_like_imperfections=has_imperfections,
+            sentiment_similarity=sentiment_similarity,
+            emotional_tone_match=emotional_tone_match,
+            subjectivity_similarity=subjectivity_similarity
         )
 
     def evaluate_batch(self,
@@ -266,5 +353,8 @@ class StylisticAnalyzer:
             'mean_complexity_similarity': np.mean([a.complexity_similarity for a in alignments]),
             'mean_formality_similarity': np.mean([a.formality_similarity for a in alignments]),
             'mean_style_score': np.mean([a.style_consistency_score for a in alignments]),
-            'pct_with_imperfections': np.mean([a.has_human_like_imperfections for a in alignments]) * 100
+            'pct_with_imperfections': np.mean([a.has_human_like_imperfections for a in alignments]) * 100,
+            'mean_sentiment_similarity': np.mean([a.sentiment_similarity for a in alignments]),
+            'mean_emotional_tone_match': np.mean([a.emotional_tone_match for a in alignments]),
+            'mean_subjectivity_similarity': np.mean([a.subjectivity_similarity for a in alignments])
         }
