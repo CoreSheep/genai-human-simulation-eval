@@ -8,11 +8,17 @@ This solution evaluates how accurately AI-generated human simulations mimic real
 
 ### Evaluation Results
 
-![Multi-Dimensional Overview](outputs/figures/overview_scores.png)
-*Multi-dimensional evaluation across semantic, stylistic, and LLM-as-judge dimensions*
+<p align="center">
+  <img src="outputs/figures/overview_scores.png" alt="Multi-Dimensional Overview" width="600"/>
+  <br>
+  <em>Multi-dimensional evaluation across semantic, stylistic, and LLM-as-judge dimensions</em>
+</p>
 
-![Performance by Category](outputs/figures/category_performance.png)
-*Performance breakdown across different question categories*
+<p align="center">
+  <img src="outputs/figures/category_performance.png" alt="Performance by Category" width="700"/>
+  <br>
+  <em>Performance breakdown across different question categories</em>
+</p>
 
 ## Evaluation Framework
 
