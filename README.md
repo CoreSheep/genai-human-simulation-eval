@@ -44,7 +44,7 @@ python -c "import nltk; nltk.download('punkt')"
 
 ## Usage
 
-### Quick Start (Full Pipeline)
+### Quick Start
 
 ```bash
 # Run complete evaluation pipeline
@@ -55,7 +55,7 @@ This will:
 1. Load and validate the dataset
 2. Run multi-dimensional evaluation
 3. Generate visualizations
-4. Create the technical report PDF
+4. Save results to JSON
 
 ### Individual Components
 
@@ -65,9 +65,6 @@ python evaluate.py
 
 # Generate visualizations (requires evaluation results)
 python src/visualizations.py
-
-# Generate technical report (requires visualizations)
-python src/report_generator.py
 ```
 
 ### Configuration
@@ -84,11 +81,8 @@ export ANTHROPIC_API_KEY="your-api-key-here"
 
 ```
 outputs/
-├── evaluation_results.json     # Raw evaluation data (included in repo)
-├── technical_report.pdf        # 2-page technical report (excluded - regenerate)
-├── technical_report.docx       # Word version (excluded - regenerate)
-├── executive_pitch_deck.pptx   # Pitch deck (excluded - regenerate)
-└── figures/                    # Visualization charts (included in repo)
+├── evaluation_results.json     # Raw evaluation data
+└── figures/                    # Visualization charts
     ├── overview_scores.png
     ├── dimension_comparison.png
     ├── person_performance.png
@@ -96,8 +90,6 @@ outputs/
     ├── score_distributions.png
     └── length_analysis.png
 ```
-
-**Note**: Large binary files (PDF, DOCX, PPTX) are excluded from the repository to keep it lightweight. Run `python run_full_evaluation.py` to regenerate them locally.
 
 ## Architecture
 
@@ -110,19 +102,18 @@ outputs/
 │   │   ├── semantic_similarity.py   # Embedding-based similarity
 │   │   ├── stylistic_analysis.py    # Linguistic feature analysis
 │   │   └── llm_judge.py            # Claude-based evaluation
-│   ├── visualizations.py            # Chart generation
-│   └── report_generator.py         # PDF report creation
+│   └── visualizations.py            # Chart generation
 ├── evaluate.py                      # Main evaluation script
 └── run_full_evaluation.py          # Master pipeline orchestrator
 ```
 
 ## Key Features
 
-✅ **Async I/O**: Concurrent LLM API calls with rate limiting
-✅ **Professional Code**: Type hints, docstrings, clean architecture
-✅ **Robust Metrics**: Multi-dimensional evaluation beyond simple similarity
-✅ **Small Dataset Handling**: Appropriate statistics for 30 samples
-✅ **Beautiful Visualizations**: Publication-quality charts for reports
+✅ **Async I/O**: Concurrent LLM API calls with rate limiting  
+✅ **Professional Code**: Type hints, docstrings, clean architecture  
+✅ **Robust Metrics**: Multi-dimensional evaluation beyond simple similarity  
+✅ **Small Dataset Handling**: Appropriate statistics for 30 samples  
+✅ **Beautiful Visualizations**: Publication-quality charts  
 ✅ **Comprehensive Documentation**: Clear code and usage instructions
 
 ## Methodology Highlights
@@ -171,36 +162,10 @@ EVALUATION SUMMARY
   Naturalness: 5.7/10
 ```
 
-## Project Outputs
-
-- **Code**: Complete, professional implementation
-- **Technical Report**: 2-page PDF with visualizations and insights
-- **Executive Presentation**: Apple-style pitch deck
-
-## Development
-
-### Running Tests
-
-```bash
-pytest tests/
-```
-
-### Code Quality
-
-- Follows PEP 8 style guidelines
-- Type hints for better IDE support
-- Comprehensive docstrings
-- Async I/O for performance
-- Modular, extensible architecture
-
 ## References
 
 - Park, J. S., et al. (2024). "Generative Agent Simulations of 1,000 People" arXiv:2411.10109
 - [Paper Link](https://arxiv.org/abs/2411.10109)
-
-## Contact
-
-For questions or issues, refer to the technical report or evaluation results.
 
 ---
 
