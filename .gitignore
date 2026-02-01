@@ -83,6 +83,14 @@ outputs/~$*.doc
 RB_GenAI_Assignment.pdf
 RB_GenAI_Assignment.docx
 
+# Internal documentation and generators (not for public view)
+CLAUDE.md
+EVALUATION_SUMMARY.md
+FINAL_DELIVERABLES.md
+src/pitch_deck_generator.py
+src/report_generator.py
+src/word_report_generator.py
+
 # Logs
 *.log
 logs/
