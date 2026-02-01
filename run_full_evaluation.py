@@ -7,7 +7,6 @@ This orchestrates:
 2. Multi-dimensional evaluation
 3. Results analysis
 4. Visualization generation
-5. Technical report creation
 """
 
 import sys
@@ -18,7 +17,6 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent / 'src'))
 
 from visualizations import ResultVisualizer
-from report_generator import TechnicalReportGenerator
 
 
 async def main():
@@ -28,7 +26,7 @@ async def main():
     print("=" * 70)
 
     # Step 1: Run evaluation
-    print("\n[1/4] Running multi-dimensional evaluation...")
+    print("\n[1/3] Running multi-dimensional evaluation...")
     print("-" * 70)
 
     # Import and run main evaluation
@@ -38,28 +36,22 @@ async def main():
     evaluator.save_results()
 
     # Step 2: Generate visualizations
-    print("\n[2/4] Generating visualizations...")
+    print("\n[2/3] Generating visualizations...")
     print("-" * 70)
     visualizer = ResultVisualizer()
     visualizer.create_all_visualizations()
 
-    # Step 3: Generate technical report
-    print("\n[3/4] Creating technical report (PDF)...")
-    print("-" * 70)
-    report_gen = TechnicalReportGenerator()
-    report_gen.generate_report()
-
-    # Step 4: Summary
-    print("\n[4/4] Pipeline complete!")
+    # Step 3: Summary
+    print("\n[3/3] Pipeline complete!")
     print("=" * 70)
     print("\n📁 OUTPUT FILES:")
     print("  • outputs/evaluation_results.json - Raw evaluation data")
-    print("  • outputs/figures/*.png - Visualization charts")
-    print("  • outputs/technical_report.pdf - 2-page technical report")
-    print("\n🎯 NEXT STEPS:")
-    print("  • Review the technical report for key findings")
-    print("  • Create pitch deck based on insights (manual step)")
-    print("  • Validate results with stakeholders")
+    print("  • outputs/figures/*.png - Visualization charts (6 charts)")
+    print("\n🎯 KEY METRICS:")
+    print("  • Semantic similarity analysis")
+    print("  • Stylistic alignment (with emotional analysis)")
+    print("  • LLM-as-judge holistic assessment")
+    print("  • Per-person and per-category breakdowns")
     print("\n" + "=" * 70)
 
 
