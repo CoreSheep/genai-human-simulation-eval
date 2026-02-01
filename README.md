@@ -32,6 +32,7 @@ This solution evaluates how accurately AI-generated human simulations mimic real
    - Response length patterns
    - Readability and complexity metrics
    - Formality levels
+   - **Emotional tone and sentiment analysis**
    - Presence of human-like imperfections (typos, casual language)
 
 3. **LLM-as-Judge** - Holistic expert assessment
@@ -160,21 +161,35 @@ EVALUATION SUMMARY
 ================================================================
 
 📊 SEMANTIC SIMILARITY
-  Mean: 0.723
-  Range: [0.524, 0.891]
+  Mean: 0.52 (52% content alignment)
+  Range: [0.16, 0.78]
 
-✍️  STYLISTIC ALIGNMENT
-  Mean style score: 0.612
-  Length ratio (AI/Human): 1.84x
-  Responses with human-like imperfections: 23.3%
+✍️  STYLISTIC ALIGNMENT (with Emotional Analysis)
+  Mean style score: 0.71 (71% style consistency)
+  Length ratio (AI/Human): 2.82x
+  Responses with human-like imperfections: 0%
+  Sentiment similarity: 86%
+  Emotional tone match: 81%
 
-🤖 LLM JUDGE ASSESSMENT
-  Overall score: 6.2/10
-  Semantic match: 7.1/10
-  Style match: 5.8/10
-  Personality match: 5.4/10
-  Naturalness: 5.7/10
+🤖 LLM JUDGE ASSESSMENT (0-10 scale)
+  Overall score: 3.4/10
+  Semantic match: 4.1/10
+  Style match: 3.2/10
+  Personality match: 2.3/10
+  Naturalness: 4.0/10
 ```
+
+### Key Findings
+
+**Strengths:**
+- **Emotional alignment (86%)**: AI successfully captures sentiment and emotional tone
+- **Style consistency (71%)**: Good overall match including emotional expression
+- Some questions achieve 78% semantic similarity
+
+**Challenges:**
+- Length mismatch (2.82× longer responses)
+- Missing human imperfections (0% typos/errors)
+- Personality capture difficulty (2.3/10)
 
 ## References
 
